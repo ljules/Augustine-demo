@@ -78,7 +78,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                         <li class="nav-item {% if sousNav != None %}dropdown{% endif %}">
                             <a  class="nav-link {# active #} {% if sousNav != None %}dropdown-toggle{% endif %}"
                                 {#{% if page.url == url %} aria-current="page" {% endif %}#}
-                                href="..{{ url }}"
+                                href="{{ SITEURL }}{{ url }}"
                                 {% if sousNav != None %} data-bs-toggle="dropdown" {% endif %}
                                 {% if sousNav != None %} aria-expanded="false" {% endif %}
                             >
@@ -88,7 +88,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                             {% if sousNav != None %}
                                 <ul class="dropdown-menu bg-dark-subtle">
                                     {% for nom, url in sousNav %}
-                                        <li><a class="dropdown-item" href="..{{ url }}">{{ nom }}</a></li>
+                                        <li><a class="dropdown-item" href="{{ SITEURL }}{{ url }}">{{ nom }}</a></li>
                                     {% endfor %}
                                 </ul> 
                             {% endif %}
