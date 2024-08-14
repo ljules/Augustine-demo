@@ -23,4 +23,4 @@ Toute entreprise, collectivité territoriale souhaitant apporter un soutien logi
 |  Présentation lors de forum de la CAMVS.| Matériel de communication : t-shirt, équipement |
 | Présentation en exclusivité aux membres du conseil communautaire lors d'un conseil. | Un soutien pour se rapprocher   de la SNECMA |
 
-![Augustine sur le circuit de Londres](/images/img_pages/34046193744_691b6b4095_o.jpg)
+![Augustine sur le circuit de Londres]({static}/images/img_pages/34046193744_691b6b4095_o.jpg)

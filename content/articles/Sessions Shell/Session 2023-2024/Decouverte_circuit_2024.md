@@ -13,4 +13,4 @@ Cela dit, le circuit de Nogaro s'est revêtu durant la basse d'un saison d'un re
 
 Mais ce moment de parcours pedestre, c'est surtout le 1er contact de nos pilotes avec le circuit et un moment d'échanges pour discuter trajectoires et stratégies de courses.
 
-![L'équipe sur piste](</images/Shell-2024/03-Eco-Marathon-2024/05-Decouverte-circuit/WhatsApp Image 2024-05-20 at 14.00.17 (5).jpeg>)
+![L'équipe sur piste](<{static}/images/Shell-2024/03-Eco-Marathon-2024/05-Decouverte-circuit/WhatsApp Image 2024-05-20 at 14.00.17 (5).jpeg>)

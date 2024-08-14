@@ -10,7 +10,7 @@ Tags: Nogaro, 2024
 Aujourd'hui le Shelle a publié le programme fixant le lieu et les dates de la session 2024 de l'Eco-Marathon.
 Comme en 2023 et 2022 la session Europe-Afrique de l'Eco-Marathon se déroulera sur le circuit Paul d'Armagnac à Nogaro dans le Gers.
 
-![Logo du circuit](/images/Shell-2024/01-Avant-session-2024/Logo-circuit-Paul-Armagnac-Nogaro.png)
+![Logo du circuit]({static}/images/Shell-2024/01-Avant-session-2024/Logo-circuit-Paul-Armagnac-Nogaro.png)
 
 ## Informations principales de la session 2024 :
 
@@ -20,12 +20,12 @@ Comme en 2023 et 2022 la session Europe-Afrique de l'Eco-Marathon se déroulera 
 
 ## Le plan du circuit :
 
-![Plan du circuit](/images/Shell-2024/01-Avant-session-2024/Plan-officiel-circuit-Nogaro.png)
+![Plan du circuit]({static}/images/Shell-2024/01-Avant-session-2024/Plan-officiel-circuit-Nogaro.png)
 
 ## Quelques photos :
 
-![Les stands vue extérieure](/images/Shell-2024/01-Avant-session-2024/IMG_20220706_131257.jpg)
+![Les stands vue extérieure]({static}/images/Shell-2024/01-Avant-session-2024/IMG_20220706_131257.jpg)
 
-![Les stands vue extérieure](/images/Shell-2024/01-Avant-session-2024/IMG_20230525_081146.jpg)
+![Les stands vue extérieure]({static}/images/Shell-2024/01-Avant-session-2024/IMG_20230525_081146.jpg)
 
-![Les stands vue intérieure](/images/Shell-2024/01-Avant-session-2024/IMG_20230525_081319.jpg)
+![Les stands vue intérieure]({static}/images/Shell-2024/01-Avant-session-2024/IMG_20230525_081319.jpg)
