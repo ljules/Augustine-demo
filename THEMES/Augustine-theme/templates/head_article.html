@@ -1,0 +1,50 @@
+<!-- 
+_______________________________________________________________________________
+
+                                ARTICLE DE TETE
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template définira l'affichage de l'article de tête de la page d'accueil.
+-->
+
+<article>
+
+    <div class="mx-3 border rounded-4">
+        <!-- Titre de  l'article : -->    
+        <div class="row m-0 ps-2 pt-2 pb-2 shadow rounded-top-4 text-capitalize bg-dark ">
+            <span class="fs-4 fw-bold text-warning"><i class="bi bi-alarm-fill me-2"></i>
+            <span class="fs-5 small">Dernière nouvelle :</span></span>
+            <h3 class="ms-4 ps-4 fw-bold">
+                <a href="{{ SITEURL }}/{{ article.url }}" class="text-light ms-1">{{ article.title }}</a>
+            </h3>        
+        </div>
+
+        <!-- Contenu de l'article : -->
+        <div class="row m-0 ps-3 pt-3 pb-4 bg-body-secondary border-top border-3 border-warning shadow rounded-bottom-4">
+            <div class="article-contenu">
+                {{ article.content }}
+            </div>            
+        </div> 
+        <!-- Information sur l'article : -->
+        <div class="m-0 ps-3 pt-1 pb-1 rounded-bottom-4 bg-dark" style="font-size:0.75em;">
+            {% include 'article_infos.html' %}
+        </div> 
+    </div>                
+    
+</article>
+
+
+<!-- Script pour afficher le contenu la propriété ALT sous les images : -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.article-contenu img').forEach(function(img) {
+            const altText = img.getAttribute('alt');
+            const caption = document.createElement('div');
+            caption.className = 'alt-img';
+            caption.textContent = altText;
+            img.parentNode.appendChild(caption);
+        });
+    });  
+</script>

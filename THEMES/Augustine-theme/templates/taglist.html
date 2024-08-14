@@ -1,0 +1,17 @@
+<!-- 
+_______________________________________________________________________________
+
+                            GENERATION DES TAGS
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template génère les tags des articles.
+-->
+
+{% if article.tags %}
+    {% for tag in article.tags %}
+        <a href="{{ SITEURL }}/{{ tag.url }}" class="text-light">{{ tag | escape }}</a>
+        {% if loop.index < loop.length %}, {% endif %}
+    {% endfor %}
+{% endif %}

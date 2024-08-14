@@ -1,0 +1,72 @@
+<!-- 
+_______________________________________________________________________________
+
+                                PAGES STATIQUES
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template définira les pages statiques du site.
+-->
+
+
+{% extends "base.html" %}
+
+{% block html_lang %}{{ page.lang }}{% endblock %}
+{% block title %}{{ page.title|striptags }}{% endblock %}
+
+{% block extra_head %}
+    {% import 'translations.html' as translations with context %}
+    {% if translations.entry_hreflang(page) %}
+        {{ translations.entry_hreflang(page) }}
+    {% endif %}
+{% endblock %}
+
+ <!-- Icone de l'onglet de navigation : -->
+ {% block faviBloc %} 
+ <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+{% endblock %}
+
+<!-- CONTENU SOUS-EN-TETE : -->
+{% block contenu_sous_tete %}
+<div class="text-light py-1 small">
+   <span><i class="bi bi-file-earmark-text-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+   {{ page.title }}
+</div>    
+{% endblock %}
+
+
+<!-- CONTENU DE LA PAGE : -->
+{% block content %}
+    <div class="border rounded-4 bg-body-secondary shadow">
+    <section>
+        <div class="ps-4 pt-3 pb-2 bg-dark text-warning rounded-top-4 text-capitalize fw-bold">
+            <h1>{{ page.title }}</h1>
+        </div>
+        
+        <div class="extra-contenu">
+            {% import 'translations.html' as translations with context %}
+            {{ translations.translations_for(page) }}
+            {{ page.content }}
+        </div>
+    </section>
+    </div>
+
+    <div class="m-0 rounded-bottom-4 bg-dark" style="height:2em;">
+
+    </div>
+
+    <!-- Script pour afficher le contenu la propriété ALT sous les images : -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.extra-contenu img').forEach(function(img) {
+                const altText = img.getAttribute('alt');
+                const caption = document.createElement('div');
+                caption.className = 'alt-img';
+                caption.textContent = altText;
+                img.parentNode.appendChild(caption);
+            });
+        });  
+    </script>
+
+{% endblock %}

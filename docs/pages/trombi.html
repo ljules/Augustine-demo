@@ -1,0 +1,1743 @@
+<!-- 
+_______________________________________________________________________________
+
+                                    TROMBI
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template reçoit exploite le contenu du plugin trombi pour produire
+l'affichage d'une page avec les trombis.
+-->
+
+<!-- 
+_______________________________________________________________________________
+
+                                    PAGE DE BASE
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template reçoit le contenu des autres pages.
+Il permet ainsi de définir l'entête et le pied de page de toutes les pages du site.
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+
+        <!-- Titre du site : -->
+        <title>Augustine</title>
+
+        <!-- Icone de l'onglet de navigation : -->
+ 
+ <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+
+        <!-- Bootstrap partie CSS via CDN : -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+        <!-- Importation des icônes de Bootstrap : -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Fichier CSS spécifique : -->
+        <link rel="stylesheet" href="../theme/css/main.css" />
+       
+        <!-- FLUX DE CONTENU ATOM & RSS -->
+
+
+</head>
+
+<body>
+<!-- HEADER : -->
+<header>
+    <!-- NAVBAR : -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom navbar-transparent">
+        <div class="container ms-1 ps-1 mx-lg-auto px-lg-0">            
+            <div class="m-0 p-0 me-4">
+            <!-- Titre principal : -->
+                <p class="m-0 p-0 ">
+                    <a class="navbar-brand" href="../" title="Page d'accueil">Augustine</a>
+                </p>
+
+                <!-- Titre secondaire : -->
+                <p class="titre-secondaire d-none d-md-block m-0 p-0"><i>Plus loin <i class="bi bi-speedometer"></i>, Moins d'énergie <i class="bi bi-battery-full"></i></i></p>
+            </div>
+
+
+            <!-- Bouton dévellopement menu en mode collapsé : -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Eléments de navigation : -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
+                        <li class="nav-item ">
+                            <a  class="nav-link  "
+                                href="/"
+                            >
+                            <i  class="bi bi-bi bi-house-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Home</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                href=""
+ data-bs-toggle="dropdown"  aria-expanded="false"                             >
+                            <i  class="bi bi-feather d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Articles</a>
+
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                        <li><a class="dropdown-item" href="/archives">Archive des articles</a></li>
+                                        <li><a class="dropdown-item" href="/categories">Liste des catégories</a></li>
+                                        <li><a class="dropdown-item" href="/authors">Liste des auteurs</a></li>
+                                        <li><a class="dropdown-item" href="/tags">Liste des mots clés</a></li>
+                                </ul> 
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                href=""
+ data-bs-toggle="dropdown"  aria-expanded="false"                             >
+                            <i  class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Equipes</a>
+
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                        <li><a class="dropdown-item" href="/pages/trombi">Trombinoscope</a></li>
+                                        <li><a class="dropdown-item" href="/pages/equipes">Liste des équipes</a></li>
+                                </ul> 
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                href=""
+ data-bs-toggle="dropdown"  aria-expanded="false"                             >
+                            <i  class="bi bi-image-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Galerie</a>
+
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                        <li><a class="dropdown-item" href="/pages/2015">2015</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2016">2016</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2017">2017</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2018">2018</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2019">2019</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2022">2022</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2023">2023</a></li>
+                                        <li><a class="dropdown-item" href="/pages/2024">2024</a></li>
+                                </ul> 
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                href=""
+ data-bs-toggle="dropdown"  aria-expanded="false"                             >
+                            <i  class="bi bi-ev-front-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Véhicules</a>
+
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                        <li><a class="dropdown-item" href="/pages/augustine-1">Augustine I</a></li>
+                                        <li><a class="dropdown-item" href="/pages/augustine-2">Augustine II</a></li>
+                                        <li><a class="dropdown-item" href="/pages/augustine-3">Augustine III</a></li>
+                                        <li><a class="dropdown-item" href="/pages/augustine-4">Augustine IV</a></li>
+                                        <li><a class="dropdown-item" href="/pages/augustine-5">Augustine V</a></li>
+                                </ul> 
+                        </li>
+                        <li class="nav-item ">
+                            <a  class="nav-link  "
+                                href="/pages/performances"
+                            >
+                            <i  class="bi bi-trophy-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Performances</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                href=""
+ data-bs-toggle="dropdown"  aria-expanded="false"                             >
+                            <i  class="bi bi-info-circle-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            A propos</a>
+
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                        <li><a class="dropdown-item" href="/pages/a-propos-de-nous">De nous</a></li>
+                                        <li><a class="dropdown-item" href="/pages/a-propos-du-shell">De l'Eco-marathon</a></li>
+                                        <li><a class="dropdown-item" href="/pages/on-parle-de-nous">On parle de nous</a></li>
+                                        <li><a class="dropdown-item" href="/pages/devenir-partenaire">Devenir partenaire</a></li>
+                                </ul> 
+                        </li>
+                </ul>
+            </div>
+
+            <!-- Logo Tournesol & LdV -->
+            <div id="logoCarrousel" class="carousel slide logoCarrousel d-none d-lg-block" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../theme/img/logos/Logo_tournesol.jpg" class="d-block h-100 rounded-2" alt="Logo_tournesol.jpg">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="../theme/img/logos/logo&baseline-fondblanc.png" class="d-block h-100 rounded-2" alt="logo&baseline-fondblanc.png">
+                        </div>
+                </div>
+            </div> 
+        </div>
+
+    </nav>                
+
+    <!-- CARROUSEL : -->
+    <div id="topCarrousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- Boutons centraux : -->
+        <div class="carousel-indicators">
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+        </div>
+
+
+        <div class="carousel-inner">
+
+            <!-- Image à afficher : -->
+                <div class="carousel-item active">
+                    <img src="../theme/img/carrousel/augustine_2017-01-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Un véhicule électrique</h5>
+                    <p><i>Réalisé par notre équipe.</i></p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="../theme/img/carrousel/session_2024-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Une équipe de professeurs & d'étudiants</h5>
+                    <p><i>Pour vivre ensemble l'aventure.</i></p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="../theme/img/carrousel/augustine_2017-03-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Un objectif</h5>
+                    <p><i>Prendre part au challenge international du Shell Eco-Marthon.</i></p>
+                    </div>
+                </div>
+  
+          
+        </div>
+        
+        <!-- Boutons latéraux : -->
+        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+</header>
+
+<!-- TITRE OPTIONNEL DE SECTION : -->
+<header class="second-header">    
+    <div class="bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Éléments alignés à gauche -->
+                <div class="d-flex align-items-center">
+<div class="text-light py-1 small">
+   <span><i class="bi bi-person-badge-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+   Trombi
+</div>    
+                </div>
+            
+                <!-- Éléments alignés à droite -->
+                <div class="small d-flex align-items-center ms-auto" style="color:var(--nav-link-active);">
+                    <i class="bi bi-arrows-expand me-2"></i>
+                    <div class="form-check form-switch mt-1">
+                        <input  class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="toggle-nav"
+                                checked title="Réduire la barre de navigation"
+                                style="height:12px !important;">
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</header>
+
+<!-- ELEMENTS DE NAVIGATION AUTOMATIQUE  -->
+<!-- 
+<nav><ul>
+        <li><a href="https://www.vinci-melun.org/">LdV</a></li>
+
+            <li><a href="../pages/augustine-1.html">Augustine I</a></li>
+            <li><a href="../pages/augustine-2.html">Augustine II</a></li>
+            <li><a href="../pages/augustine-3.html">Augustine III</a></li>
+            <li><a href="../pages/augustine-4.html">Augustine IV</a></li>
+            <li><a href="../pages/augustine-5.html">Augustine V</a></li>
+            <li><a href="../pages/a-propos-du-shell.html">Présentation du Shell Eco-marathon</a></li>
+            <li><a href="../pages/a-propos-de-nous.html">A propos de nous</a></li>
+            <li><a href="../pages/devenir-partenaire.html">Devenir partenaire</a></li>
+            <li><a href="../pages/on-parle-de-nous.html">On parle de nous !</a></li>
+            <li><a href="../pages/performances.html">Performances</a></li>
+            <li class="active"><a href="../pages/trombi.html">Trombi</a></li>
+            <li><a href="../pages/equipes.html">Equipes</a></li>
+            
+
+            <li><a href="../category/shell-2024.html">Shell 2024</a></li>
+            <li><a href="../category/shell-2025.html">Shell 2025</a></li>
+</ul></nav> -->
+
+
+<main>
+    <!-- MAIN CONTENAIR : -->
+    <div class="container mt-5 p-0 min-vh-100">  
+
+        <div class="main-content">
+            <!-- MAIN CONTENT : -->
+
+
+    <!-- Titre : -->
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center bg-warning text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-person-badge-fill text-dark"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 d-flex align-items-center shadow section-titre">
+            <b class="me-2 text-light">Trombinoscope :</b> Tous les membres depuis 2015
+        </div>
+    </div>
+
+
+    <!-- CONTROLE DES FILTRES : -->
+    <div class="mx-3 my-4 p-0 rounded-3 shadow text-light" style="background-color:rgb(50, 50, 50)">
+        
+        <h2 class="bg-warning m-0 rounded-top-3 p-2 fw-bold text-dark">Filtres d'affichage</h2>
+
+        <div class="m-3 pb-3">
+            
+            <div class="small">
+                <h5><u>Filtre par fonction :</u></h5>
+
+                <!-- Switch afficher/masquer étudiants : -->
+                <div class="form-check form-switch ms-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggleStudent" checked>
+                    <label class="form-check-label" for="toggleStudent">Etudiants</label>
+                </div>
+
+
+                <!-- Switch afficher/masquer encadrants : -->
+                <div class="form-check form-switch ms-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggleTeacher" checked>
+                    <label class="form-check-label" for="toggleTeacher">Encadrants</label>
+                </div>
+            </div>
+
+            
+            <div class="mt-4 small">
+                <h5><u>Filtre par rôle des étudiants :</u></h5>
+
+                <!-- Switch afficher/masquer pilotes : -->
+                <div class="form-check form-switch ms-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggleDriver" checked>
+                    <label class="form-check-label" for="toggleDriver">Pilotes</label>
+                </div>
+
+                <!-- Switch afficher/masquer managers : -->
+                <div class="form-check form-switch ms-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggleManager" checked>
+                    <label class="form-check-label" for="toggleManager">Team Managers</label>
+                </div>
+
+                <!-- Switch afficher/masquer équipiers : -->
+                <div class="form-check form-switch ms-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="toggleMember" checked>
+                    <label class="form-check-label" for="toggleMember">Equipiers</label>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <!-- AFFICHAGE DES VIGNETTES : -->
+    <div class="row">
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item responsable de la stratégie et de la perspective. encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/ARBELLOT_Pascal.png"
+                         alt="Photo de Pascal ARBELLOT"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Pascal ARBELLOT
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2015
+                        </li>                        
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> Responsable de la stratégie et de la perspective.
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Membre fondateur de l'équipe, Pascal est le sage de l'équipe. Les membres de l'équipe sont à l'écoute de ses conseils."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><a href="https://fr.linkedin.com/in/arbellot-de-vacqueur-pascal-967a308a" target="_blank" title="Voir son LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/ARMAND_Jean-Alex.png"
+                         alt="Photo de Jean-Alex ARMAND"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Jean-Alex ARMAND
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2022
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2022
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> pilote
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Pilote principal de la saison 2022, Jean-Alex a su par sa maitrise nous mener à la 3e place."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/BERNARD_Logan.png"
+                         alt="Photo de Logan BERNARD"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Logan BERNARD
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2023
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> manager
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/CORNET_Melissa.png"
+                         alt="Photo de Melissa CORNET"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Melissa CORNET
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> pilote
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"2 ans de participation au Shell pour Melissa. Elle fût pilote secondaire en 2023. Son kiff, les médias du Shell où elle la première volontaire pour s'exposer aux caméras."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/FREDAL_Baptiste.png"
+                         alt="Photo de Baptiste FREDAL"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Baptiste FREDAL
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2023
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/GEGOU_Clemence.png"
+                         alt="Photo de Clémence GEGOU"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Clémence GEGOU
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> pilote
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Elèves en 2024 en terminal STI2D SIN, Clémence est une redoutable pilote par son sans froid et son esprit réactif."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrante, traductrice anglais encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/GODEBIN_Charlotte.png"
+                         alt="Photo de Charlotte GODEBIN"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Charlotte GODEBIN
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> Encadrante, traductrice anglais
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Charlotte a rejoint notre équipe depuis 2023, elle assure la cohésion de l'équipe par son enchadrement bien veillant de nos chers étudiants."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/GOURITEN_Allan.png"
+                         alt="Photo de Allan GOURITEN"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Allan GOURITEN
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Plus qu'un équipier, Allan nous a fait profiter de ses talents d'Instragrameur."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/HOUY_Nathan.png"
+                         alt="Photo de Nathan HOUY"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Nathan HOUY
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> manager
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Nathan est un manager consciencieux et imperturbable."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item développement électrique, électronique et informatique du projet encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/JULES_Laurent.png"
+                         alt="Photo de Laurent JULES"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Laurent JULES
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2015
+                        </li>                        
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> Développement électrique, électronique et informatique du projet
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/laurent-jules-ab304910/" target="_blank" title="Voir son LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/LISOWSKI_Alexandre.png"
+                         alt="Photo de Alexandre LISOWSKI"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Alexandre LISOWSKI
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2022
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2022
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrant encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/MARIAS_Elodie.png"
+                         alt="Photo de Elodie MARIAS"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Elodie MARIAS
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2018
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2019
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> encadrant
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Elodie a assuré avec talent les tâches liées à la communication et la coordination."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/MEUNIER_Theo.png"
+                         alt="Photo de Theo MEUNIER"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Theo MEUNIER
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2023
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> pilote
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Pilote principale de la saison 2023."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/MOUTAIB_Ferdaouss.png"
+                         alt="Photo de Ferdaouss MOUTAIB"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Ferdaouss MOUTAIB
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2025
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Un sens iné à la médiation et aux relations publiques nationales et internationales !"</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/PELLETIER_Lucas.png"
+                         alt="Photo de Lucas PELLETIER"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Lucas PELLETIER
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2022
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2022
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> manager
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/PERON_Adrian.png"
+                         alt="Photo de Adrian PERON"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Adrian PERON
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2023
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/POMMIERS_Hugo.png"
+                         alt="Photo de Hugo POMMIER"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Hugo POMMIER
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2022
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2022
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/hugo-pommiers/" target="_blank" title="Voir son LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item  encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/POVEDA_Ivan.png"
+                         alt="Photo de Ivan POVEDA"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Ivan POVEDA
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> 
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Ivan aime dénicher les pièces rares du bon coin à Alibaba. Il assure l'encadrement de l'équipe et gère la logistique sur site."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/jose-poveda-08a308b1/" target="_blank" title="Voir son LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item organisateur principal, responsable de la communication. encadrant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        encadrant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/POYAC_Denis.png"
+                         alt="Photo de Denis POYAC"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Denis POYAC
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2015
+                        </li>                        
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> Organisateur principal, responsable de la communication.
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Membre fondateur de l'équipe, Denis à en charge le pilotage du projet. Il est reconnu pour son humeur toujours égale et son sens de la diplomatie."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><a href="https://www.instagram.com/augusteam.ldv" target="_blank" title="Voir son Instagram"><i class="bi bi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.facebook.com/AugustineShellEco" target="_blank" title="Voir son Facebook"><i class="bi bi-facebook"></i></a></li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/SKORUPKA_Tristan.png"
+                         alt="Photo de Tristan SKORUPKA"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Tristan SKORUPKA
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2023
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2023
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/TAILLEFER_Jahmal.png"
+                         alt="Photo de Jahmal TAILLEFER"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Jahmal TAILLEFER
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/YEBOAH_Laurent.png"
+                         alt="Photo de Laurent YEBOAH"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Laurent YEBOAH
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>""</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+                <div class="bg-warning text-center m-0 py-1" style="height:40px;">
+                    <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
+                        étudiant
+                    </p>
+                </div>
+
+                <div class="text-center py-3 m-0 bg-light" style="height:200px;">
+                    <img src="../trombi/YIGIT_Ibrahim.png"
+                         alt="Photo de Ibrahim YIGIT"
+                         class="rounded-circle border border-2" style="max-height: 180px; max-width:150px;">
+                </div>
+
+                <div class="bg-warning text-center m-0 p-1 py-2" style="height:40px;">
+                    <p class="fw-bold m-0 p-0 text-dark-emphasis">
+                        Ibrahim YIGIT
+                    </p>
+                </div>
+            
+                <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2" style="height:250px; overflow: hidden;">                    
+                    <p class="h5 fw-bold">Service :</p>
+                    <ul class="small">
+                        <li>
+                            <b>Date d'entrée :</b> 2024
+                        </li>                        
+                            <li>
+                                <b>Date sortie :</b> 2024
+                            </li>
+                            
+                        
+                        <!-- <li><b>Section :</b> BTS CPI</li> -->
+                        <li>
+                            <b>Rôle(s) :</b> équipier
+                        </li>
+                    </ul>
+
+                    <div class="small">
+                        <p class="fw-bold mb-1">Biographie :</p>
+                        <p>
+                            <em>"Toujours jovial tout en étant efficace, Ibrahim est un équipier en or."</em>
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-dark-subtle text-center m-0 p-1 fs-5" style="min-height:2em;">                    
+                    <ul class="list-inline m-0 p-0">
+                    </ul>
+                </div>   
+            </div>
+    </div>
+
+
+    <!-- SCRIPT POUR LA GESTION DES COMMANDES DE FILTRES : -->
+    <script>
+        // Filtre d'affichage des étudiants :
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleStudent = document.getElementById('toggleStudent');
+            var toggleDriver = document.getElementById('toggleDriver');
+            var toggleManager = document.getElementById('toggleManager');
+            var toggleMember = document.getElementById('toggleMember');
+
+            // Action du toggle étudiants :
+            toggleStudent.addEventListener('change', function() {
+                var students = document.querySelectorAll('.étudiant');
+                students.forEach(function(student) {
+                    if (student.style.display === 'none') {
+                        student.style.display = 'block';
+                    } else {
+                        student.style.display = 'none';
+                    }
+                });
+
+                // Activation & désactivation des toggles de sélection des pilotes, manager et équipiers
+                if (toggleStudent.checked) {
+                    toggleDriver.disabled = toggleManager.disabled = toggleMember.disabled = false;
+                    toggleDriver.checked = toggleManager.checked = toggleMember.checked = true;
+                } else {
+                    toggleDriver.disabled = toggleManager.disabled = toggleMember.disabled = true;
+                    toggleDriver.checked = toggleManager.checked = toggleMember.checked = false;
+                }
+            });
+
+            // Actions du toggle pilote :
+            toggleDriver.addEventListener('change', function() {
+                var drivers = document.querySelectorAll('.pilote');
+                drivers.forEach(function(driver) {
+                    if (driver.style.display === 'none') {
+                        driver.style.display = 'block';
+                    } else {
+                        driver.style.display = 'none';
+                    }
+                });
+            });
+
+            // Actions du toggle manager :
+            toggleManager.addEventListener('change', function() {
+                var managers = document.querySelectorAll('.manager');
+                managers.forEach(function(manager) {
+                    if (manager.style.display === 'none') {
+                        manager.style.display = 'block';
+                    } else {
+                        manager.style.display = 'none';
+                    }
+                });
+            });
+
+            // Actions du toggle équipier :
+            toggleMember.addEventListener('change', function() {
+                var members = document.querySelectorAll('.équipier');
+                members.forEach(function(member) {
+                    if (member.style.display === 'none') {
+                        member.style.display = 'block';
+                    } else {
+                        member.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Filtre d'affichage des encadrants :
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('toggleTeacher').addEventListener('change', function() {
+                var teachers = document.querySelectorAll('.encadrant');
+                teachers.forEach(function(teacher) {
+                    if (teacher.style.display === 'none') {
+                        teacher.style.display = 'block';
+                    } else {
+                        teacher.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+
+    </script>
+        </div>
+
+    </div>
+</main>
+
+
+<section>
+</section>
+
+
+<!-- OPTIONAL NAVBAR : -->
+ <div class="footer bg-dark mt-5">
+
+    <nav class="container text-center p-0">
+        <div class="row">
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour à l'accueil"
+            href="..">
+                <i class="bi bi-house-up"></i>
+            </a>
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour haut de page"
+            href="#">
+                <i class="bi bi-chevron-bar-up"></i>
+            </a>
+        </div>
+
+    </nav>
+
+ </div>
+
+
+<!-- FOOTER : -->
+<footer class="footer mt-0 pt-4 couleur-fond-tete-pied">
+
+    <!-- MAIN FOOTER : -->
+    <div class="container">
+        
+        <div class="row mb-2 mx-lg-5 ps-lg-5 up-footer">
+
+        <!-- Coordonnées postales : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-person-vcard-fill text-white me-1"></i>Nous contacter</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light">
+                    <i class="bi bi-envelope-fill text-warning me-1"></i>
+                    <p class="m-0 ms-2 d-inline">Lycée Léonard de Vinci</p>
+                    <p class="m-0 ms-4">2, bis rue Edouard Branly</p>
+                    <p class=" ms-4">77000 MELUN CEDEX</p>
+                </li>
+                <li class="mb-1 p-0 text-light icon">
+                    <i class="bi-telephone-fill text-warning me-2"></i>
+                    +33 1 60 60 56 60
+                </li>                
+                <li class="mb-1 p-0 text-light">
+                    <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                    <a class="nav-link d-inline" href="https://maps.google.com/?q=Lyc%C3%A9e%20Vinci,%20Melun" target="_blank" title="Nous voir sur Map">Google Map</a>
+                </li>
+        </ul>
+        </div>
+
+        <!-- Réseaux sociaux : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-megaphone-fill text-white me-1"></i>Nous suivre</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.instagram.com/augusteam.ldv"
+                       target="_blank"
+                       title="Aller sur notre Instagram">
+                    <i class="bi bi-instagram text-warning me-2"></i>
+                    Instagram
+                    </a>
+                </li>   
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.facebook.com/AugustineShellEco"
+                       target="_blank"
+                       title="Aller sur notre Facebook">
+                    <i class="bi bi-facebook text-warning me-2"></i>
+                    Facebook
+                    </a>
+                </li>   
+              
+        </ul>
+        </div>
+
+        <!-- Autres sites : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-signpost-2-fill text-white me-1"></i>Autres liens</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.vinci-melun.org/"
+                       target="_blank">
+                    <img class="me-2"
+                         src="../theme/img/icones/ldv.png"
+                         style="width: 1.3em">Site du lycée
+                    </a>
+                </li>
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.shellecomarathon.com/"
+                       target="_blank">
+                    <img class="me-2"
+                         src="../theme/img/icones/shell-flat.png"
+                         style="width: 1.3em">Site Shell Eco-Marathon
+                    </a>
+                </li>
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.shell.fr/energie-innovation/shell-eco-marathon.html"
+                       target="_blank">
+                    <img class="me-2"
+                         src="../theme/img/icones/shell-flat.png"
+                         style="width: 1.3em">Site Shell Eco-Marathon France
+                    </a>
+                </li>
+                
+        </ul>
+        </div>                
+
+        </div>
+
+        <!-- Informations bas de page : -->
+        <div class="row pt-3 pb-3 m-0 text-center text-light border-top border-2 low-footer">
+                <p class="p-0 m-0">Section de Technicien Supérieur <b>CPI</b> du Lycée <b>Léonard de Vinci</b></b></p>                
+                <p class="p-0 m-0">Site développé par la S.T.S. <b>SIO</b> du Lycée <b>Léonard de Vinci</b></b></p>                
+        </div>
+        
+    </div>
+</footer>
+
+
+
+
+
+    <!-- Bootstrap partie JS via CDN : -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script JS : -->
+    <script src="../theme/js/main.js"></script>
+</body>
+</html>

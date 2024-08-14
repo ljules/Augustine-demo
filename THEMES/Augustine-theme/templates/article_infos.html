@@ -1,0 +1,59 @@
+<!-- 
+_______________________________________________________________________________
+
+                            INFORMATIONS DES ARTICLES
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template génère les informations des articles.
+-->
+
+
+
+<footer class="d-lg-inline-flex text-light py-2">
+    <div class="ms-2">
+        <span class="fw-bold text-warning"><i class="bi bi-calendar-date-fill"></i></span>
+        <!-- Date de publication : -->        
+        <span class="me-1 fw-bold text-warning">Publié : </span>
+        <span class="text-white">{{ article.locale_date }}</span>
+    
+        <!-- Date de mise à jour :  -->
+        {% if article.modified %}             
+            - <span class="me-1 fw-bold text-warning">Mis à jour :</span>
+            <span class="text-white">{{ article.locale_modified }}</span>
+        {% endif %}
+    </div>
+
+    <!-- Affichage des auteurs : -->
+    {% if article.authors %}
+    <div class="ms-2">
+        <address class="m-0"> 
+            <span class="me-1 fw-bold text-warning"><i class="bi bi-person-fill"></i>
+            {% if article.authors | length == 1 %}Auteur :{% else %} Auteurs :{% endif %}
+            </span>
+                       
+            {% for author in article.authors %}
+                        <a href="{{ SITEURL }}/{{ author.url }}" class="text-white">{{ author }}</a>
+                        {% if loop.index < loop.length %}, {% endif %}
+            {% endfor %}
+        </address>
+    {% endif %}
+    </div>
+
+    <!-- Catégorie : -->
+    <div class="ms-2">
+        <span class="me-1 fw-bold text-warning"><i class="bi bi-folder-fill"></i> Catégorie : </span>
+        <a href="{{ SITEURL }}/{{ article.category.url }}" class="text-white">{{ article.category }}</a>
+    </div>
+
+    <!-- Tags : -->
+     <div class="ms-2">
+        <span class="me-1 fw-bold text-warning"><i class="bi bi-tag-fill"></i> Mots clés : </span>
+        <span class="text-white">{% include 'taglist.html' %}</span>
+     </div>    
+
+</footer>
+
+{% import 'translations.html' as translations with context %}
+{{ translations.translations_for(article) }}

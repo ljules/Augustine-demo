@@ -1,0 +1,129 @@
+<!-- 
+_______________________________________________________________________________
+
+                        PAGE AVEC NAVIGATION AVEC LA PAGINATION
+_______________________________________________________________________________
+
+Description :
+-------------
+Ce template définit la structure de base pour assurer la navigation avec la pagination.
+Il ne sera donc pas utilisé directement, mais pas extension.
+-->
+
+
+{% extends "base.html" %}
+
+<!-- CONTENU PRINCIPAL : -->
+{% block content %}
+
+    <!-- CONTENU SPECIFIQUE A LA 1ERE PAGE : -->
+    {% if not articles_page.has_previous() %}        
+        {% block first_page_content %}
+        {% endblock %}
+    {% endif %} 
+
+    <!-- AFFICHAGE DES ARTICLES: -->
+    {% if articles %}
+        {% for article in articles_page.object_list %}
+
+            {# Affichage de l'article en tête de liste #}
+            {% if loop.first and not articles_page.has_previous() %}
+
+                <!-- Article de tête : -->
+                <aside class="container mt-5 p-0">
+                    {% include 'head_article.html' %}
+                </aside>
+
+        <div class="container mt-5 p-0">            
+            {% if loop.length > 1 %}
+                <section>
+                    <div class="row col m-0 ps-1 pt-2 pb-0 shadow rounded-top-4 text-capitalize bg-dark">
+                        <span class="h4 fw-bold text-light"><i class="bi bi-feather me-2 text-warning"></i>Autres articles</span>
+                    </div>
+                    <div class="row col m-0 mb-4 p-0  fs-4 text-center rounded-bottom-4 shadow text-warning border-top border-warning border-2 autres-article-head">
+                        <i class="bi bi-caret-down-fill"></i>
+                    </div>
+            {% endif %}
+
+            <!-- Affichage des autres articles : -->
+            {% else %}
+                {% if loop.first %}
+                    <section>
+                        <!-- <span id="posts-list"  start="{{ articles_paginator.per_page -1 }}"></span> -->
+                    {% endif %}
+                
+                <!-- Contenu des autres articles : -->
+                <article class="border mx-2 mb-4 bg-white shadow rounded-4">
+
+                    <!-- Titre de l'article : -->
+                    <header class="m-0 ps-3 p-2 bg-dark rounded-top-4 fs-6 text-warning">
+                        <span class="me-1 fw-bold">Titre : </span>
+                        <span><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                            title="Lire l'article : {{ article.title|striptags }}"
+                            class="text-light">
+                            {{ article.title }}
+                        </a></span>
+                    </header>
+
+                    <!-- Résumé de l'article : -->
+                    <div class="p-3 pb-0">
+                        <span class="fw-bold ps-1" >Résumé :</span>
+                        <div class="ps-3 pb-0 fst-italic">
+                            {{ article.summary }}
+                        </div>                        
+                    </div>
+
+                    <div class="ps-4 bg-secondary" style="font-size:0.75em;">
+                        {% include 'article_infos.html' %}
+                    </div>
+                    
+                    <div class="pb-1 bg-dark text-center rounded-bottom-4">
+                    <a  href="{{ SITEURL }}/{{ article.url }}" class="text-warning fw-bold" title="Lire :  {{ article.title|striptags }}">Lire l'article</a>                    
+                    </div>
+                     
+                    <!-- Commentaires : -->
+                    <div>
+                        {% include 'comments.html' %}
+                    </div>
+
+                </article>
+            {% endif %}
+
+            {% if loop.last %}
+                {% if loop.length > 1 or articles_page.has_other_pages() %}
+                    
+                    <!-- Affichage du paginator : -->
+                    {% if articles_page.has_other_pages() %}
+                        <div class="mt-5 mb-0">
+                            {% include 'pagination.html' %}
+                        </div>                        
+                    {% endif %}
+                    </section>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+
+        </div>
+
+
+    {# AFFICHAGE DU CONTENU ALTERNATIF EN ABSENCE D'ARTICLES #}
+    {% else %}
+    
+        {# Affichage des éventuelles pages #}
+        <section>
+            {% if pages %}
+                <h2>Pages</h2>
+                <ul>
+                    {% for page in pages %}
+                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            {# Message affiché en absence total de contenu #}
+            {% else %}
+                <p>Le site ne contient aucun articles ou pages à présenter.</p>
+            {% endif %}
+        </section>
+    {% endif %}
+    
+{% endblock content %}

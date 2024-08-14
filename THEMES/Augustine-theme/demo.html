@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augustine</title>
+
+    <!-- Bootstrap partie CSS via CDN : -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+    <!-- Importation des icônes de Bootstrap : -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+     <!-- Fichier CSS spécifique : -->
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+<!-- HEADER : -->
+<header>
+    <!-- NAVBAR : -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom navbar-transparent">
+        <div class="container ms-1 ps-1 mx-lg-auto px-lg-0">
+            
+            <div class="m-0 p-0 me-4">
+            <!-- Titre principal : -->
+                <p class="m-0 p-0 "><a class="navbar-brand" href="#">Augustine</a></p>
+
+                <!-- Titre secondaire : -->
+                <p class="titre-secondaire d-none d-md-block m-0 p-0"><i>Plus loin <i class="bi bi-speedometer"></i>, moins d'énergie <i class="bi bi-battery-full"></i></i></p>
+            </div>
+
+
+            <!-- Bouton dévellopement menu en mode collapsé : -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Eléments de navigation : -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-file-image-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-trophy-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>Performances</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-feather d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>Presse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-info-circle-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>A propos</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-ev-front-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i> Véhicules</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Augustine I</a></li>
+                          <li><a class="dropdown-item" href="#">Augustine II</a></li>
+                          <li><a class="dropdown-item" href="#">Augustine III</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Logo Tournesol & LdV -->
+            <div id="logoCarrousel" class="carousel slide logoCarrousel d-none d-lg-block" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <img src="static/img/logos/Logo_tournesol.jpg" class="d-block h-100 rounded-2" alt="Logo Tournesol">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="static/img/logos/logo&baseline-fondblanc.png" class="d-block h-100" alt="Logo LdV">
+                  </div>
+
+                </div>
+            </div> 
+        </div>
+    </nav>
+
+
+    <!-- CARROUSEL : -->
+    <div id="topCarrousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+       
+        <!-- Boutons centraux : -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <!-- 1ère image : -->
+          <div class="carousel-item active">
+            <img src="static/img/carrousel/augustine_2017-01-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-none d-md-block">            
+              <h5>Un véhicule</h5>
+              <p><i>Réalisé par notre équipe de professeurs & étudiants.</i></p>
+            </div>
+          </div>
+
+          <!-- 2e image : -->
+          <div class="carousel-item">
+            <img src="static/img/carrousel/session_2024-R.jpg" class="d-block w-100" alt="L'équipe après une session de course en 2024">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-none d-md-block">            
+              <h5>Une équipe</h5>
+              <p><i>Vivre et partager ensemble l'aventure.</i></p>
+            </div>
+          </div>
+
+          <!-- 3e image : -->
+          <div class="carousel-item">
+            <img src="static/img/carrousel/augustine_2017-03-R.jpg" class="d-block w-100" alt="Augustine à Londres en 2017">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-none d-md-block">            
+              <h5>Un objectif</h5>
+              <p><i>Prendre part au challenge international du Shell Eco-Marthon</i></p>
+            </div>
+          </div>
+        </div>
+
+
+        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+
+
+
+<!-- CONTENU PRINCIPAL : -->
+<main>
+    <div class="container  mt-5 p-0 min-vh-100">        
+        
+        <!-- Section des news :  -->
+         <div class = "container mt-5 p-0">
+            <!-- Titre de section : -->
+            <div class="row col-4 m-0 ps-1 pt-2 pb-0 bg-warning-subtle rounded-top-4 text-capitalize">
+                <h1><i class="bi bi-alarm-fill me-2 text-body-tertiary"></i><span class="text-secondary">Dernières nouvelles :</span></h1>
+            </div>
+
+            <!-- Contenu de la section : -->
+             <div class="row ms-0 me-4 ps-2 pt-3 pb-4 bg-light border-top border-3 border-warning-subtle shadow rounded-bottom-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam omnis, hic, praesentium obcaecati reprehenderit doloribus quo nesciunt aliquid quae qui earum ipsa aut ab quos ut vero libero soluta? Officiis?</p>
+
+             </div>
+         </div>       
+
+          
+        <!-- Section des news :  -->
+        <div class = "container bg-tertiary mt-5 p-0">        
+            
+        <!-- Contenu de la section : -->
+            <div class="row mt-5 mb-5 ms-0 me-4 ps-2 pt-4 pb-4 bg-light  border border-2 border-warning-subtle shadow rounded-3">                          
+            
+                <!-- Titre de section : -->
+                <div>
+                    <span class="m-0 p-2 bg-secondary text-center fs-4 rounded-2"><i class="bi bi-alarm-fill text-body-secondary"></i></span>
+                    <span class="p-1 pe-4 rounded-end-2 bg-dark-subtle text-secondary-emphasis fw-bold fs-4" style="-webkit-margin-start: -5px;">Dernières nouvelles</span>
+                </div>  
+
+                <div class="mt-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam omnis, hic, praesentium obcaecati reprehenderit doloribus quo nesciunt aliquid quae qui earum ipsa aut ab quos ut vero libero soluta? Officiis?</p>
+                </div>
+            
+            </div>
+       
+
+        <!-- Les cards Bootstrap : -->
+        <div class="row">
+
+
+            <h1>Les cards de Bootstrap :</h1>
+
+            <!-- Card avec image en haut : -->
+            <div class="card border-0 p-0 shadow col-4 m-2">
+
+                <img src="static/img/carrousel/etudiants_2022-R.jpg" class="card-img-top p-0  border border-0 border-warning" alt="Exemple image">         
+                
+                <div class="card-header bg-body-secondary">
+                    <p>Ici c'est le header </p>
+                </div>
+                <div class="card-body ">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+                <div class="card-footer bg-body-tertiary">
+                    <p>Ici c'est le footer</p>
+                </div>
+            </div>
+
+            <!-- Card avec image en bas : -->
+            <div class="card border-0 p-0 shadow col-3 m-2">            
+                
+                <div class="card-header bg-body-secondary">
+                    <p>Ici c'est le header </p>
+                </div>
+                <div class="card-body ">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+                <div class="card-footer bg-body-tertiary">
+                    <p>Ici c'est le footer</p>
+                </div>
+
+                <img src="static/img/tests/CPN-3776GBD2B-1235.jpg" class="card-img-bottom p-0  border border-0 border-warning" alt="Exemple image">         
+            </div>
+
+            <!-- Card avec overlay : -->
+            <div class="card shadow p-0 col-4 m-2">
+                <img src="static/img/tests/20180705_213056.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Affichage horizontal : -->
+        <div class="card m-3 shadow col-9">
+        <div class="row g-0">
+            <div class="col-md-4">
+            <img src="static/img/tests/20160622_181938.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+
+        <!-- Affichage horizontal avec Carrousel : -->        
+        <div class="card m-3 shadow col-9">
+            <div class="row g-0">
+                <div class="col-md-4">
+
+                    <div class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="static/img/tests/20160622_181938.jpg" class="d-block" alt="">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="static/img/tests/27740277570_ba1c7f7fd7_o.jpg" class="d-block" alt="">
+                          </div>
+                        </div>
+                    </div> 
+
+                </div>
+
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Affichage des portraits : -->
+        <div class="mt-3">
+            <h1>Affichage de portraits :</h1>
+
+            <div class="row">
+
+                <div class="col-4 shadow border border-2 border-warning rounded-2 p-0">
+    
+                    <div class="bg-warning text-center m-0 py-1">
+                        <p class="fw-bold fs-5 m-0 py-1">ENCADRANT </p>
+                    </div>
+    
+                    <div class="text-center py-3 m-0 bg-light">
+                        <img  src="static/img/portraits/POYAC Denis.png" class="rounded-circle border border-2" style="max-width: 180px;">
+                    </div>
+
+                    <div class="bg-warning text-center m-0 p-1">
+                        <p class="fs-5 fw-bold m-0 p-1 text-dark-emphasis">Denis POYAC</p>
+                    </div>
+                
+                    <div class="bg-body-secondary ms-0 me-0 p-2 border-top border-2">
+                        
+                        <p class="h5 fw-bold">Service :</p>
+                        <ul class="small">
+                            <li><b>Date d'entrée :</b> 2015</li>
+                            <li><b>Date sortie équipe :</b> Toujours en service</li>
+                            <li><b>Section :</b> BTS CPI</li>
+                            <li><b>Rôle(s) :</b> Organisateur principal, Responsable de la communication</li>
+                        </ul>
+
+                        <div class="small">
+                            <p class="fw-bold mb-1">Biographie :</p>
+                            <p><em>"Membre fondateur de l'équipe, Denis à en charge le pilotage du projet. Il est reconnu pour son humeur toujours égale, son sens de la diplomatie."</em></p>
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="bg-dark-subtle text-center m-0 p-1 fs-5">                    
+                        <ul class="list-inline m-0 p-0">
+                            <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
+                            <li class="list-inline-item"><i class="bi bi-facebook"></i></li>
+                            <li class="list-inline-item"><i class="bi bi-linkedin"></i></li>
+                        </ul>
+                    </div>    
+    
+                </div>
+    
+            </div>
+
+        </div>
+        
+
+        <!-- Composition d'un article :  -->
+        <div class="mt-5 border rounded-1 shadow">
+            <!-- Titre : -->
+             <div class="ps-2 pt-2 pb-1 fw-bold text-capitalize bg-dark-subtle rounded-top-1">
+                <h1>Titre de l'article</h1>
+             </div>         
+
+            <!-- Contenu de l'article : -->
+            <div class="m-0 p-2 bg-body-tertiary">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae reiciendis sit tempora repellendus iusto aut illum voluptatibus, animi, similique architecto voluptate dolor doloremque eos aperiam veniam expedita sapiente et quos.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, facilis illo? Tempore, voluptatem inventore exercitationem vel corporis in esse fugiat a. Hic aperiam, consequuntur voluptatem laudantium nisi tenetur ad dignissimos?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias labore dignissimos aut voluptatibus provident. Aliquam reiciendis porro facilis laboriosam? Eveniet atque aliquam expedita numquam enim quia similique illo, quae quo.
+                </p>
+            </div>
+
+            <!-- Métadonnées : -->
+            <div class="m-0  ps-3 bg-warning-subtle small rounded-bottom-1">
+                <ul class="m-0 list-unstyled list-group-horizontal">
+                    <li class="list-inline-item"><span class="fw-bold text-dark-emphasis"><i class="bi bi-person-fill"></i> Auteur : </span>John DOE</li>
+                    <li class="list-inline-item"><span class="fw-bold text-dark-emphasis"><i class="bi bi-calendar-date-fill"></i> Ecrit le : </span>24/02/204</li>
+                    <li class="list-inline-item"><span class="fw-bold text-dark-emphasis"><i class="bi bi-tag-fill"></i> Mots clés  : </span>énergie, challenge</li>
+                    <li class="list-inline-item"><span class="fw-bold text-dark-emphasis"><i class="bi bi-folder-fill"></i> Catégorie : </span>Course</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Autres éléments : -->
+        <div class="mt-5">
+            <h1>Autres éléments :</h1>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+    <div class="h1 text-warning">Test de la couleur warning</div>
+</main>
+
+ 
+
+
+<!-- FOOTER : -->
+<footer class="footer mt-5 pt-4 couleur-fond-tete-pied">
+    <div class="container">
+        <div class="row mb-2 mx-lg-5 ps-lg-5 up-footer">
+
+            <div class="col-12 col-md-4">
+            <p class="text-start text-warning icon-link"><i class="bi-person-vcard-fill text-white me-1"></i>Nous contacter</p>
+            <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light"><i class="bi bi-envelope-fill text-warning me-1"></i><p class="m-0 ms-1 d-inline">Lycée Léonard de Vinci</p><p class="m-0 ms-4">2, bis rue Edouard Branly</p><p class=" ms-4">77000 MELUN CEDEX</p></li>
+                <li class="mb-1 p-0 text-light icon"><i class="bi-telephone-fill text-warning me-2"></i>+33 1 60 60 56 60</li>
+                <li class="mb-1 p-0 text-light"><i class="bi bi-geo-alt-fill text-warning me-2"></i> <a class="nav-link d-inline" href="https://maps.google.com/?q=Lyc%C3%A9e%20Vinci,%20Melun" target="_blank">Google Map</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-12 col-md-4">
+            <p class="text-start text-warning icon-link"><i class="bi-megaphone-fill text-white me-1"></i>Nous suivre</p>
+            <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light"><a class="nav-link d-inline" href="https://www.instagram.com/augusteam.ldv" target="_blank"><i class="bi bi-instagram text-warning me-2"></i>Instagram</a></li>
+                <li class="mb-1 p-0 text-light"><a class="nav-link d-inline" href="https://www.facebook.com/AugustineShellEco" target="_blank"><i class="bi bi-facebook text-warning me-2"></i>Facebook</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-12 col-md-4">
+            <p class="text-start text-warning icon-link"><i class="bi-signpost-2-fill text-white me-1"></i>Autres liens</p>
+            <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light"><a class="nav-link d-inline" href="https://www.vinci-melun.org/" target="_blank"><i class="bi bi-globe text-warning me-2"></i>Site du lycée</a></li></li>
+                <li class="mb-1 p-0 text-light"><a class="nav-link d-inline" href="https://www.shellecomarathon.com/" target="_blank"><img class="me-2" src="static/img/icones/shell-flat.png" style="width: 1.3em" >Site Shell Eco-Marathon</a></li>
+                <li class="mb-1 p-0 text-light"><a class="nav-link d-inline" href="https://www.shell.fr/energie-innovation/shell-eco-marathon.html" target="_blank"><img class="me-2" src="static/img/icones/shell-flat.png" style="width: 1.3em" >Site Shell Eco-Marathon France</a></li>
+            </ul>
+            </div>                
+
+        </div>
+
+        <div class="row pt-3 pb-3 m-0 text-center text-light border-top border-2 low-footer">            
+            <p class="p-0 m-0">Section de Technicien Supérieur <b>CPI</b> du Lycée <strong>Léonard de Vinci</strong>
+            <p class="'p-0 m-0">Site développé par la S.T.S. <b>SIO</b> du Lycée <strong>Léonard de Vinci</strong></p>
+        </div>
+        
+    </div>
+</footer>
+
+
+
+
+    <!-- Bootstrap partie JS via CDN : -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script JS de mise en transparence/opacité de la navbar : -->
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>

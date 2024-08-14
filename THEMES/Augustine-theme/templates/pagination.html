@@ -1,0 +1,37 @@
+<!-- 
+_______________________________________________________________________________
+
+                                PAGINATOR
+_______________________________________________________________________________
+
+Description :
+-------------
+Ce template génère le paginator permettant la navigation entre les différentes
+pages des articles.
+-->
+
+
+{% if DEFAULT_PAGINATION %}
+    {% set first_page = articles_paginator.page(1) %}
+    {% set last_page = articles_paginator.page(articles_paginator.num_pages) %}
+
+    <nav>
+        <ul class="pagination justify-content-center">
+            <!-- Flèches pages précédentes :  -->
+            {% if articles_page.has_previous() %}
+                <li class="page-item shadow"><a class="page-link bg-dark text-warning border-black" title="Aller à la 1ère page" href="{{ SITEURL }}/{{ first_page.url }}"><i class="bi bi-chevron-bar-left"></i></a></li>
+                <li class="page-item shadow"><a class="page-link bg-dark-subtle text-black border-black" title="Aller à la page précédente" href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="bi bi-chevron-compact-left"></i></a></li>
+            {% endif %}
+
+            <!-- Numéro de page en cours : -->
+            <li class="page-item active shadow"><span class="page-link bg-dark text-white border-black fw-bold">Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}</span></li>
+            
+            <!-- Flèches pages suivantes : -->
+            {% if articles_page.has_next() %}
+                <li class="page-item shadow"><a class="page-link bg-dark-subtle text-black border-black" title="Aller à la page suivante" href="{{ SITEURL }}/{{ articles_next_page.url }}"><i class="bi bi-chevron-compact-right"></i></a></li>
+                <li class="page-item shadow"><a class="page-link bg-dark text-warning border-black" title="Aller à la dernière page" href="{{ SITEURL }}/{{ last_page.url }}"><i class="bi bi-chevron-bar-right"></i></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+{% endif %}

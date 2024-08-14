@@ -1,0 +1,57 @@
+<!-- 
+_______________________________________________________________________________
+
+                                PAGE DE D'ACCUEIL
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template définira la page d'accueil du site.
+-->
+
+
+{% extends "nav_with_pagination.html" %}
+
+
+{% block content_title %}{% endblock %}
+
+
+<!-- CONTENU SOUS-EN-TETE : -->
+{% block contenu_sous_tete %}
+    <div class="small text-light py-1"><span><i class="bi bi-house-fill me-2 text-warning"></i></span>Bienvenue sur notre page d'accueil !</div>
+{% endblock contenu_sous_tete %}
+
+
+<!-- CONTENU DE L'ACCUEIL SUR LA PAGE 1 : -->
+{% block first_page_content %} 
+
+    <div class="mx-2 mb-5 rounded-4 border bg-body-secondary shadow accueil">        
+        {{ accueil | safe }}
+    </div>
+
+    <!-- Titre de la section articles : -->
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center bg-warning text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-feather text-dark"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 d-flex align-items-center shadow section-titre">
+            <b class="me-2 text-light">Nos articles</b>
+        </div>
+    </div>
+
+{% endblock %}
+
+ 
+<!-- NAVBAR DE PIED : -->
+{% block bottom_nav_bar %}
+    <nav class="container text-center p-0">
+        <div class="row">
+            <a class="col-12 btn btn-dark text-warning fs-3"
+            title="Retour haut de page"
+            href="#">
+                <i class="bi bi-chevron-bar-up"></i>
+            </a>
+        </div>
+    </nav>
+{% endblock bottom_nav_bar %}

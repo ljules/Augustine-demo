@@ -1,0 +1,86 @@
+<!-- 
+_______________________________________________________________________________
+
+                            ARCHIVES DES ARTICLES
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template génère la liste des articles.
+-->
+
+{% extends "base.html" %}
+
+
+{% block title %}{{ SITENAME|striptags }} - Archives{% endblock %}
+
+
+<!-- CONTENU SOUS-EN-TETE : -->
+{% block contenu_sous_tete %}
+    <div class="text-light py-1 small">
+        <span><i class="bi bi-box-seam-fill me-2 text-warning"></i><b class="text-warning">Archive des articles </b></span>      
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Titre : -->
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center bg-warning text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-box-seam-fill text-dark"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 d-flex align-items-center shadow section-titre">
+            <b class="me-2 text-light">Archives des articles du site {{ SITENAME }}</b>
+        </div>
+    </div>
+
+
+    <!-- Tableau des articles : -->
+    <section>
+        <table class="table table-striped shadow border border-2 border-dark table-bordered mx-2">
+            <thead class="border border-2 border-dark text-center align-middle">
+                <tr>
+                    <th class="bg-secondary text-warning" scope="col">TITRE</th>
+                    <th class="bg-secondary text-warning" scope="col" class="text-center">DATE</th>
+                    <th class="bg-secondary text-warning" scope="col">RESUME</th>
+                    <th class="bg-secondary text-warning" scope="col">LIRE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in dates %}
+                <tr>
+                    <td class="fw-bold align-middle">{{ article.title }}</td>
+                    <td class="small align-middle text-center">{{ article.locale_date }}</td>
+                    <td class="small fst-italic align-middle">{{ article.summary }}</td>
+                    <td class="fs-3 align-middle text-center">
+                        <a href="{{ SITEURL }}/{{ article.url }}">
+                            <i class="bi bi-eye-fill"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>        
+    </section>
+
+{% endblock %}
+
+
+<!-- NAVBAR DE PIED : -->
+{% block bottom_nav_bar %}
+    <nav class="container text-center p-0">
+        <div class="row">
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour à l'accueil"
+            href="{{ SITEURL }}">
+                <i class="bi bi-house-up"></i>
+            </a>
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour haut de page"
+            href="#">
+                <i class="bi bi-chevron-bar-up"></i>
+            </a>
+        </div>
+    </nav>
+{% endblock %}

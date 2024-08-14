@@ -1,0 +1,3453 @@
+<!-- 
+_______________________________________________________________________________
+
+                                    GALLERY
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template reçoit exploite le contenu du plugin gallery_plugin pour produire
+l'affichage d'une page avec les thumbnails (vignettes).
+-->
+
+
+<!-- Définition de macros : -->
+<!-- ---------------------- -->
+
+
+
+<!-- 
+_______________________________________________________________________________
+
+                                    PAGE DE BASE
+_______________________________________________________________________________
+
+Description :
+-------------
+Cette page du template reçoit le contenu des autres pages.
+Il permet ainsi de définir l'entête et le pied de page de toutes les pages du site.
+-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+
+        <!-- Titre du site : -->
+        <title>Augustine</title>
+
+        <!-- Icone de l'onglet de navigation : -->
+         
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+
+
+        <!-- Bootstrap partie CSS via CDN : -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+
+        <!-- Importation des icônes de Bootstrap : -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Fichier CSS spécifique : -->
+        <link rel="stylesheet" href="/theme/css/main.css" />
+       
+        <!-- FLUX DE CONTENU ATOM & RSS -->
+        
+
+        
+
+        
+        
+</head>
+
+<body>
+<!-- HEADER : -->
+<header>
+    <!-- NAVBAR : -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom navbar-transparent">
+        <div class="container ms-1 ps-1 mx-lg-auto px-lg-0">            
+            <div class="m-0 p-0 me-4">
+            <!-- Titre principal : -->
+                <p class="m-0 p-0 ">
+                    <a class="navbar-brand" href="/" title="Page d'accueil">Augustine</a>
+                </p>
+
+                <!-- Titre secondaire : -->
+                <p class="titre-secondaire d-none d-md-block m-0 p-0"><i>Plus loin <i class="bi bi-speedometer"></i>, Moins d'énergie <i class="bi bi-battery-full"></i></i></p>
+            </div>
+
+
+            <!-- Bouton dévellopement menu en mode collapsé : -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Eléments de navigation : -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
+                    
+                        <li class="nav-item ">
+                            <a  class="nav-link  "
+                                
+                                href="/"
+                                
+                                
+                            >
+                            <i  class="bi bi-bi bi-house-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Home</a>
+
+                            
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                
+                                href=""
+                                 data-bs-toggle="dropdown" 
+                                 aria-expanded="false" 
+                            >
+                            <i  class="bi bi-feather d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Articles</a>
+
+                            
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                    
+                                        <li><a class="dropdown-item" href="/archives">Archive des articles</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/categories">Liste des catégories</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/authors">Liste des auteurs</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/tags">Liste des mots clés</a></li>
+                                    
+                                </ul> 
+                            
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                
+                                href=""
+                                 data-bs-toggle="dropdown" 
+                                 aria-expanded="false" 
+                            >
+                            <i  class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Equipes</a>
+
+                            
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                    
+                                        <li><a class="dropdown-item" href="/pages/trombi">Trombinoscope</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/equipes">Liste des équipes</a></li>
+                                    
+                                </ul> 
+                            
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                
+                                href=""
+                                 data-bs-toggle="dropdown" 
+                                 aria-expanded="false" 
+                            >
+                            <i  class="bi bi-image-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Galerie</a>
+
+                            
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2015">2015</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2016">2016</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2017">2017</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2018">2018</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2019">2019</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2022">2022</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2023">2023</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/2024">2024</a></li>
+                                    
+                                </ul> 
+                            
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                
+                                href=""
+                                 data-bs-toggle="dropdown" 
+                                 aria-expanded="false" 
+                            >
+                            <i  class="bi bi-ev-front-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Véhicules</a>
+
+                            
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                    
+                                        <li><a class="dropdown-item" href="/pages/augustine-1">Augustine I</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/augustine-2">Augustine II</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/augustine-3">Augustine III</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/augustine-4">Augustine IV</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/augustine-5">Augustine V</a></li>
+                                    
+                                </ul> 
+                            
+                        </li>
+                    
+                        <li class="nav-item ">
+                            <a  class="nav-link  "
+                                
+                                href="/pages/performances"
+                                
+                                
+                            >
+                            <i  class="bi bi-trophy-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            Performances</a>
+
+                            
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            <a  class="nav-link  dropdown-toggle"
+                                
+                                href=""
+                                 data-bs-toggle="dropdown" 
+                                 aria-expanded="false" 
+                            >
+                            <i  class="bi bi-info-circle-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
+                            A propos</a>
+
+                            
+                                <ul class="dropdown-menu bg-dark-subtle">
+                                    
+                                        <li><a class="dropdown-item" href="/pages/a-propos-de-nous">De nous</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/a-propos-du-shell">De l'Eco-marathon</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/on-parle-de-nous">On parle de nous</a></li>
+                                    
+                                        <li><a class="dropdown-item" href="/pages/devenir-partenaire">Devenir partenaire</a></li>
+                                    
+                                </ul> 
+                            
+                        </li>
+                    
+                </ul>
+            </div>
+
+            <!-- Logo Tournesol & LdV -->
+            <div id="logoCarrousel" class="carousel slide logoCarrousel d-none d-lg-block" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                        <div class="carousel-item active">
+                            <img src="/theme/img/logos/Logo_tournesol.jpg" class="d-block h-100 rounded-2" alt="Logo_tournesol.jpg">
+                        </div>
+                    
+                        <div class="carousel-item ">
+                            <img src="/theme/img/logos/logo&baseline-fondblanc.png" class="d-block h-100 rounded-2" alt="logo&baseline-fondblanc.png">
+                        </div>
+                    
+                </div>
+            </div> 
+        </div>
+
+    </nav>                
+
+    <!-- CARROUSEL : -->
+    <div id="topCarrousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <!-- Boutons centraux : -->
+        <div class="carousel-indicators">
+            
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+            
+                <button type="button" data-bs-target="#topCarrousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+            
+        </div>
+
+
+        <div class="carousel-inner">
+
+            <!-- Image à afficher : -->
+            
+                <div class="carousel-item active">
+                    <img src="/theme/img/carrousel/augustine_2017-01-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Un véhicule électrique</h5>
+                    <p><i>Réalisé par notre équipe.</i></p>
+                    </div>
+                </div>
+            
+                <div class="carousel-item ">
+                    <img src="/theme/img/carrousel/session_2024-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Une équipe de professeurs & d'étudiants</h5>
+                    <p><i>Pour vivre ensemble l'aventure.</i></p>
+                    </div>
+                </div>
+            
+                <div class="carousel-item ">
+                    <img src="/theme/img/carrousel/augustine_2017-03-R.jpg" class="d-block w-100" alt="Augustine sur piste en 2017">
+                    <div class="overlay"></div>
+                    <div class="carousel-caption d-none d-md-block">            
+                    <h5>Un objectif</h5>
+                    <p><i>Prendre part au challenge international du Shell Eco-Marthon.</i></p>
+                    </div>
+                </div>
+              
+          
+        </div>
+        
+        <!-- Boutons latéraux : -->
+        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#topCarrousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+</header>
+
+<!-- TITRE OPTIONNEL DE SECTION : -->
+<header class="second-header">    
+    <div class="bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Éléments alignés à gauche -->
+                <div class="d-flex align-items-center">
+                    
+<div class="text-light py-1 small">
+   <span><i class="bi bi-camera-fill me-2 text-warning"></i><b class="text-warning">Photos : </b></span>
+   2017
+</div>    
+
+                </div>
+            
+                <!-- Éléments alignés à droite -->
+                <div class="small d-flex align-items-center ms-auto" style="color:var(--nav-link-active);">
+                    <i class="bi bi-arrows-expand me-2"></i>
+                    <div class="form-check form-switch mt-1">
+                        <input  class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="toggle-nav"
+                                checked title="Réduire la barre de navigation"
+                                style="height:12px !important;">
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</header>
+
+<!-- ELEMENTS DE NAVIGATION AUTOMATIQUE  -->
+<!-- 
+<nav><ul>
+    
+        <li><a href="https://www.vinci-melun.org/">LdV</a></li>
+    
+
+    
+            <li><a href="/pages/augustine-1.html">Augustine I</a></li>
+        
+            <li><a href="/pages/augustine-2.html">Augustine II</a></li>
+        
+            <li><a href="/pages/augustine-3.html">Augustine III</a></li>
+        
+            <li><a href="/pages/augustine-4.html">Augustine IV</a></li>
+        
+            <li><a href="/pages/augustine-5.html">Augustine V</a></li>
+        
+            <li><a href="/pages/a-propos-du-shell.html">Présentation du Shell Eco-marathon</a></li>
+        
+            <li><a href="/pages/a-propos-de-nous.html">A propos de nous</a></li>
+        
+            <li><a href="/pages/devenir-partenaire.html">Devenir partenaire</a></li>
+        
+            <li><a href="/pages/on-parle-de-nous.html">On parle de nous !</a></li>
+        
+            <li><a href="/pages/performances.html">Performances</a></li>
+        
+            <li><a href="/pages/trombi.html">Trombi</a></li>
+        
+            <li><a href="/pages/equipes.html">Equipes</a></li>
+                    
+    
+
+    
+            <li><a href="/category/shell-2024.html">Shell 2024</a></li>
+        
+            <li><a href="/category/shell-2025.html">Shell 2025</a></li>
+        
+    
+</ul></nav> -->
+
+
+<main>
+    <!-- MAIN CONTENAIR : -->
+    <div class="container mt-5 p-0 min-vh-100">  
+
+        <div class="main-content">
+            <!-- MAIN CONTENT : -->
+            
+
+    <!-- Titre : -->
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center section-titre text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-camera-fill text-warning"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 bg-warning text-dark fs-5 d-flex align-items-center shadow">
+            <b class="me-2 text-body-secondary">Photos :</b> 2017
+        </div>
+    </div>
+
+         
+    <!-- Titre :
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center bg-black text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-camera-fill text-warning"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-4 d-flex align-items-center shadow section-titre">
+            <b class="me-2 text-light">Photos :</b> 2017
+        </div>
+    </div>
+
+   
+    Titre : 
+    <div class="d-flex m-0 mb-3">
+        <div class="m-0 py-1 px-3 d-flex align-items-center bg-warning text-center fs-3 rounded-start-3 shadow">
+            <i class="bi bi-camera-fill text-dark"></i>
+        </div>
+        <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-4 d-flex align-items-center shadow section-titre">
+            <b class="me-2 text-light">Photos :</b> 2017
+        </div>
+    </div> -->
+
+
+    <!-- Options d'affichage : -->
+    <div class="mx-3 my-4 p-3 rounded-3 shadow text-light" style="background-color:rgb(50, 50, 50)">
+        
+        <h5 class="mb-3 text-warning"><u>Choix des options d'affichage :</u></h5>
+
+        <!-- Afficher/masque les informations sous les vignettes : -->
+        <div class="form-check form-switch ms-4 my-2">
+            <input class="form-check-input" type="checkbox" id="switch-infos-photos" checked>
+            <label class="form-check-label" for="switch-infos-photos">Afficher/masquer les informations</label>
+        </div>
+
+        <!-- Choix de la taille des vignettes : -->
+        <div class="ms-4">
+            <div class="text-warning mb-2">Taille des vignettes :</div>
+            <select class="form-select ms-1" style="width: 200px" id="select-size">                
+                <option value="256">Grande (256 px)</option>
+                <option value="128">Petite (128 px)</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- Affichage des vignettes : -->
+    <div class="row m-0 ms-3 p-0">
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#20170524_102700.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_20170524_102700.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="20170524_102700.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        24/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        10:27
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4160 x 2340 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>51.53750433333333</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>-0.009289055555555557</li>
+                    </ul>
+                    
+                    
+                        <p class="card-text my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                        <a href="https://www.google.com/maps/search/?api=1&query=51.53750433333333%2C-0.009289055555555557&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#20170524_102700.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-20170524_102700.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="20170524_102700.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">20170524_102700.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/20170524_102700.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-20170524_102700.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        24/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        10:27
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4160 x 2340 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>51.53750433333333</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>-0.009289055555555557</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=51.53750433333333%2C-0.009289055555555557&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-20170524_102700.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-20170524_102700.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-20170524_102700.jpg').src;
+                    downloadImage(image, '20170524_102700.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-20170524_102700.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/20170524_102700.jpg';
+                    downloadImage(image, '20170524_102700.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#20170524_104442_Pano.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_20170524_104442_Pano.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="20170524_104442_Pano.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        24/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        10:44
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            6592 x 2176 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#20170524_104442_Pano.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-20170524_104442_Pano.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="20170524_104442_Pano.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">20170524_104442_Pano.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/20170524_104442_Pano.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-20170524_104442_Pano.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        24/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        10:44
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        6592 x 2176 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-20170524_104442_Pano.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-20170524_104442_Pano.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-20170524_104442_Pano.jpg').src;
+                    downloadImage(image, '20170524_104442_Pano.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-20170524_104442_Pano.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/20170524_104442_Pano.jpg';
+                    downloadImage(image, '20170524_104442_Pano.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#20170525_150114.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_20170525_150114.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="20170525_150114.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        15:01
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4160 x 2340 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>51.536871805555556</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>-0.010725638888888889</li>
+                    </ul>
+                    
+                    
+                        <p class="card-text my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                        <a href="https://www.google.com/maps/search/?api=1&query=51.536871805555556%2C-0.010725638888888889&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#20170525_150114.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-20170525_150114.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="20170525_150114.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">20170525_150114.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/20170525_150114.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-20170525_150114.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        15:01
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4160 x 2340 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>51.536871805555556</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>-0.010725638888888889</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=51.536871805555556%2C-0.010725638888888889&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-20170525_150114.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-20170525_150114.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-20170525_150114.jpg').src;
+                    downloadImage(image, '20170525_150114.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-20170525_150114.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/20170525_150114.jpg';
+                    downloadImage(image, '20170525_150114.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#20170525_150115.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_20170525_150115.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="20170525_150115.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        15:01
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4160 x 2340 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#20170525_150115.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-20170525_150115.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="20170525_150115.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">20170525_150115.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/20170525_150115.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-20170525_150115.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        15:01
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4160 x 2340 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-20170525_150115.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-20170525_150115.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-20170525_150115.jpg').src;
+                    downloadImage(image, '20170525_150115.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-20170525_150115.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/20170525_150115.jpg';
+                    downloadImage(image, '20170525_150115.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34042804204_76b91b7361_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34042804204_76b91b7361_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34042804204_76b91b7361_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        12:55
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            3163 x 4367 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34042804204_76b91b7361_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34042804204_76b91b7361_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34042804204_76b91b7361_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34042804204_76b91b7361_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34042804204_76b91b7361_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34042804204_76b91b7361_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        12:55
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        3163 x 4367 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34042804204_76b91b7361_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34042804204_76b91b7361_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34042804204_76b91b7361_o.jpg').src;
+                    downloadImage(image, '34042804204_76b91b7361_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34042804204_76b91b7361_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34042804204_76b91b7361_o.jpg';
+                    downloadImage(image, '34042804204_76b91b7361_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34046193744_691b6b4095_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34046193744_691b6b4095_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34046193744_691b6b4095_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        14:09
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4928 x 3280 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34046193744_691b6b4095_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34046193744_691b6b4095_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34046193744_691b6b4095_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34046193744_691b6b4095_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34046193744_691b6b4095_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34046193744_691b6b4095_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        14:09
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4928 x 3280 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34046193744_691b6b4095_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34046193744_691b6b4095_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34046193744_691b6b4095_o.jpg').src;
+                    downloadImage(image, '34046193744_691b6b4095_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34046193744_691b6b4095_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34046193744_691b6b4095_o.jpg';
+                    downloadImage(image, '34046193744_691b6b4095_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34046196344_6565d4c3d1_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34046196344_6565d4c3d1_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34046196344_6565d4c3d1_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        14:01
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4238 x 3047 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34046196344_6565d4c3d1_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34046196344_6565d4c3d1_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34046196344_6565d4c3d1_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34046196344_6565d4c3d1_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34046196344_6565d4c3d1_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34046196344_6565d4c3d1_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        14:01
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4238 x 3047 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34046196344_6565d4c3d1_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34046196344_6565d4c3d1_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34046196344_6565d4c3d1_o.jpg').src;
+                    downloadImage(image, '34046196344_6565d4c3d1_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34046196344_6565d4c3d1_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34046196344_6565d4c3d1_o.jpg';
+                    downloadImage(image, '34046196344_6565d4c3d1_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34059574604_dfa7e73336_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34059574604_dfa7e73336_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34059574604_dfa7e73336_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        09:15
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            5174 x 3341 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34059574604_dfa7e73336_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34059574604_dfa7e73336_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34059574604_dfa7e73336_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34059574604_dfa7e73336_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34059574604_dfa7e73336_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34059574604_dfa7e73336_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        09:15
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        5174 x 3341 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34059574604_dfa7e73336_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34059574604_dfa7e73336_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34059574604_dfa7e73336_o.jpg').src;
+                    downloadImage(image, '34059574604_dfa7e73336_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34059574604_dfa7e73336_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34059574604_dfa7e73336_o.jpg';
+                    downloadImage(image, '34059574604_dfa7e73336_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34098449903_36a5049bb5_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34098449903_36a5049bb5_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34098449903_36a5049bb5_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        26/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        17:00
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4646 x 3097 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34098449903_36a5049bb5_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34098449903_36a5049bb5_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34098449903_36a5049bb5_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34098449903_36a5049bb5_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34098449903_36a5049bb5_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34098449903_36a5049bb5_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        26/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        17:00
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4646 x 3097 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34098449903_36a5049bb5_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34098449903_36a5049bb5_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34098449903_36a5049bb5_o.jpg').src;
+                    downloadImage(image, '34098449903_36a5049bb5_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34098449903_36a5049bb5_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34098449903_36a5049bb5_o.jpg';
+                    downloadImage(image, '34098449903_36a5049bb5_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34849262346_6913770b79_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34849262346_6913770b79_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34849262346_6913770b79_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        14:39
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4553 x 3110 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34849262346_6913770b79_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34849262346_6913770b79_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34849262346_6913770b79_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34849262346_6913770b79_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34849262346_6913770b79_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34849262346_6913770b79_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        14:39
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4553 x 3110 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34849262346_6913770b79_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34849262346_6913770b79_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34849262346_6913770b79_o.jpg').src;
+                    downloadImage(image, '34849262346_6913770b79_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34849262346_6913770b79_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34849262346_6913770b79_o.jpg';
+                    downloadImage(image, '34849262346_6913770b79_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#34869933776_3b7b05445b_o.jpg" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_34869933776_3b7b05445b_o.jpg"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="34869933776_3b7b05445b_o.jpg"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        26/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        19:17
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            4903 x 3268 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#34869933776_3b7b05445b_o.jpg"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-34869933776_3b7b05445b_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="34869933776_3b7b05445b_o.jpg" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">34869933776_3b7b05445b_o.jpg</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/34869933776_3b7b05445b_o.jpg" style="max-width:100%; max-height: 70vh;"
+                             id="img-34869933776_3b7b05445b_o.jpg">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        26/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        19:17
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        4903 x 3268 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-34869933776_3b7b05445b_o.jpg'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-34869933776_3b7b05445b_o.jpg').addEventListener('click', function() {
+                    var image = document.getElementById('img-34869933776_3b7b05445b_o.jpg').src;
+                    downloadImage(image, '34869933776_3b7b05445b_o.jpg');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-34869933776_3b7b05445b_o.jpg').addEventListener('click', function() {
+                    var image = '/galerie/2017/34869933776_3b7b05445b_o.jpg';
+                    downloadImage(image, '34869933776_3b7b05445b_o.jpg');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3124.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3124.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3124.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        23/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        12:37
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            3264 x 2448 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>48.88386666666667</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>2.353561111111111</li>
+                    </ul>
+                    
+                    
+                        <p class="card-text my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                        <a href="https://www.google.com/maps/search/?api=1&query=48.88386666666667%2C2.353561111111111&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3124.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3124.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3124.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3124.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3124.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3124.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        23/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        12:37
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        3264 x 2448 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>48.88386666666667</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>2.353561111111111</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=48.88386666666667%2C2.353561111111111&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3124.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3124.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3124.JPG').src;
+                    downloadImage(image, 'IMG_3124.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3124.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3124.JPG';
+                    downloadImage(image, 'IMG_3124.JPG');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3133.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3133.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3133.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        24/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        13:35
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            3264 x 2448 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3133.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3133.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3133.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3133.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3133.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3133.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        24/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        13:35
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        3264 x 2448 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3133.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3133.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3133.JPG').src;
+                    downloadImage(image, 'IMG_3133.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3133.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3133.JPG';
+                    downloadImage(image, 'IMG_3133.JPG');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3139.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3139.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3139.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        24/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        15:05
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            3264 x 2448 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>51.53703055555555</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>-0.011222222222222222</li>
+                    </ul>
+                    
+                    
+                        <p class="card-text my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                        <a href="https://www.google.com/maps/search/?api=1&query=51.53703055555555%2C-0.011222222222222222&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3139.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3139.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3139.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3139.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3139.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3139.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        24/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        15:05
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        3264 x 2448 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>51.53703055555555</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>-0.011222222222222222</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=51.53703055555555%2C-0.011222222222222222&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3139.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3139.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3139.JPG').src;
+                    downloadImage(image, 'IMG_3139.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3139.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3139.JPG';
+                    downloadImage(image, 'IMG_3139.JPG');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3153.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3153.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3153.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        08:41
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            2448 x 2448 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3153.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3153.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3153.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3153.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3153.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3153.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        08:41
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        2448 x 2448 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3153.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3153.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3153.JPG').src;
+                    downloadImage(image, 'IMG_3153.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3153.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3153.JPG';
+                    downloadImage(image, 'IMG_3153.JPG');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3159.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3159.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3159.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        
+    
+        25/05/2017
+    
+
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        
+    
+        08:42
+    
+
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            3264 x 2448 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>51.53672777777778</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>-0.012630555555555555</li>
+                    </ul>
+                    
+                    
+                        <p class="card-text my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                        <a href="https://www.google.com/maps/search/?api=1&query=51.53672777777778%2C-0.012630555555555555&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3159.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3159.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3159.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3159.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3159.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3159.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>
+    
+        25/05/2017
+    
+</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>
+    
+        08:42
+    
+</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        3264 x 2448 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>51.53672777777778</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>-0.012630555555555555</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=51.53672777777778%2C-0.012630555555555555&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3159.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3159.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3159.JPG').src;
+                    downloadImage(image, 'IMG_3159.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3159.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3159.JPG';
+                    downloadImage(image, 'IMG_3159.JPG');
+                });
+            </script>
+            
+        
+            <div class="card border-1 p-0 shadow m-1 mx-auto size-thumbnail" style="width:256px;">
+                
+                <!-- Photo : -->
+                <a  href="" data-bs-toggle="modal" data-bs-target="#IMG_3177.JPG" title="Ouvrir la photo">
+                <img src="/galerie/2017/thumbnails/thumbnail_IMG_3177.JPG"
+                    class="card-img-top p-0  border border-0 border-warning p-2" alt="IMG_3177.JPG"
+                    style="background-color:rgb(55, 55, 55)">         
+                </a>
+
+                <!-- Informations EXIF extraites des photos : -->
+                <div class="card-body small text-body-secondary border-top border-1 border-black m-0 py-1 px-3 info-exif">
+                    <p class="card-text my-1">
+                        <b class="text-black"><i class="bi bi-calendar-day"></i> : </b>
+                        N.R
+                        <b class="text-black ms-2"><i class="bi bi-clock"></i> : </b>
+                        N.R
+                    </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-aspect-ratio"></i> : </b>
+                        
+                            941 x 531 px
+                        
+                        </p>
+
+                    <p class="card-text my-1"><b class="text-black"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                    <ul class="my-0 pt-0 ms-2">
+                        <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                        <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="card-footer bg-body-tertiary small m-0 p-2 text-center">
+                    <ul class="list-inline m-0 p-0">
+                        <!-- Button trigger modal : -->
+                        <li class="list-inline-item">                                                       
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#IMG_3177.JPG"
+                                    title="Ouvrir la photo">
+                                <i class="bi bi-image-fill p-0 m-0"></i>
+                            </button>
+                        </li>
+
+                        <!-- Button download :  -->
+                         <li class="list-inline-item">
+                            <button type="button"
+                                    class="btn btn-warning m-0 py-1 px-2"
+                                    id='btn-IMG_3177.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download p-0 m-0"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+
+            <!-- MODALE VISU PHOTO :  -->            
+
+            <div class="modal fade" id="IMG_3177.JPG" tabindex="-1" aria-labelledby="dico_image.name" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+
+                    <!-- Entête : -->
+                    <div class="modal-header bg-black text-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">IMG_3177.JPG</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Photo : -->
+                    <div class="modal-body text-center" style="background-color:rgb(55, 55, 55)">
+                        <img src="/galerie/2017/IMG_3177.JPG" style="max-width:100%; max-height: 70vh;"
+                             id="img-IMG_3177.JPG">
+                    </div>
+
+                    <!-- Pied : -->
+                    <div class="modal-body d-flex m-0 p-0 pt-2 px-3 bg-black justify-content-start text-white small">
+
+                        <div class="">
+                            <ul class="list-unstyled">
+                                <li><b class="me-2 text-warning"><i class="bi bi-calendar-day"></i> : </b>N.R</li>
+                                <li><b class="me-2 text-warning"> <i class="bi bi-clock"></i> : </b>N.R</li>
+                                <li><b class="me-2 text-warning"><i class="bi bi-aspect-ratio"></i> : </b>
+                                    
+                                        941 x 531 px
+                                    
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="ms-4" >      
+                            <p class="m-0 p-0"><b class="text-warning"><i class="bi bi-pin-map-fill"></i> </b> <b> localisation GPS :</b></p>
+                            <ul class="ms-2">
+                                <li style="font-size:0.8em;"><b>lat. : </b>N.R</li>
+                                <li style="font-size:0.8em;"><b>lon. : </b>N.R</li>
+                            </ul>
+                        </div> 
+                        
+                        <!-- <div class="col">
+                            <p class="my-1"><b class="text-black"><i class="bi bi-crosshair"></i> :</b>
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2C&hl=fr" target="_blank" title="Ouvrir Google Maps sur la coordonnée">Voir sur Google Maps</a></p>
+                        </div> -->
+                    
+                        <div class="align-self-center ms-auto">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->                         
+                            <button type="button"
+                                    class="btn btn-warning"
+                                    id='btn-modal-IMG_3177.JPG'
+                                    title="Télécharger l'image">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+             <!-- Script JS pour le téléchargement des images : -->
+            <script>
+                // Téléchargement de l'image :
+                function downloadImage(imageSrc, fileName) {
+                    var link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+                // Bouton de téléchargement depuis le modal :
+                document.getElementById('btn-modal-IMG_3177.JPG').addEventListener('click', function() {
+                    var image = document.getElementById('img-IMG_3177.JPG').src;
+                    downloadImage(image, 'IMG_3177.JPG');
+                });
+
+                // Bouton de téléchargement direct depuis la page des vignettes :
+                document.getElementById('btn-IMG_3177.JPG').addEventListener('click', function() {
+                    var image = '/galerie/2017/IMG_3177.JPG';
+                    downloadImage(image, 'IMG_3177.JPG');
+                });
+            </script>
+            
+        
+    </div>            
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sélectionner les éléments nécessaires
+            const switchInfosPhotos = document.getElementById('switch-infos-photos');
+            const selectSize = document.getElementById('select-size');
+    
+            // Fonction pour afficher/masquer les éléments avec la classe "info-exif"
+            function toggleExifInfo() {
+                const exifElements = document.querySelectorAll('.info-exif');
+                exifElements.forEach(function(element) {
+                    element.style.display = switchInfosPhotos.checked ? 'block' : 'none';
+                });
+            }
+    
+            // Fonction pour appliquer la taille sélectionnée aux éléments avec la classe "size-thumbnail"
+            function applyThumbnailSize() {
+                const selectedSize = selectSize.value;
+                const thumbnailElements = document.querySelectorAll('.size-thumbnail');
+                
+                thumbnailElements.forEach(function(element) {
+                    element.style.width = `${selectedSize}px`;
+                });
+    
+                // Si la taille sélectionnée est 128px, désactiver et neutraliser le switch
+                if (selectedSize === '128') {
+                    switchInfosPhotos.checked = false; // Désactiver le switch
+                    switchInfosPhotos.disabled = true; // Désactiver le contrôle du switch
+                    toggleExifInfo(); // Masquer les infos EXIF
+                } else {
+                    switchInfosPhotos.disabled = false; // Réactiver le switch si la taille est différente de 128px
+                }
+            }
+    
+            // Ajouter les écouteurs d'événements
+            switchInfosPhotos.addEventListener('change', toggleExifInfo);
+            selectSize.addEventListener('change', applyThumbnailSize);
+    
+            // Appliquer l'état initial
+            toggleExifInfo();
+            applyThumbnailSize();
+        });
+    </script>
+    
+    
+
+
+        </div>
+
+    </div>
+</main>
+
+
+<section>
+    
+</section>
+
+
+<!-- OPTIONAL NAVBAR : -->
+ <div class="footer bg-dark mt-5">
+    
+
+    <nav class="container text-center p-0">
+        <div class="row">
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour à l'accueil"
+            href="">
+                <i class="bi bi-house-up"></i>
+            </a>
+            <a class="col-6 btn btn-dark text-warning fs-3"
+            title="Retour haut de page"
+            href="#">
+                <i class="bi bi-chevron-bar-up"></i>
+            </a>
+        </div>
+
+    </nav>
+
+
+ </div>
+
+
+<!-- FOOTER : -->
+<footer class="footer mt-0 pt-4 couleur-fond-tete-pied">
+
+    <!-- MAIN FOOTER : -->
+    <div class="container">
+        
+        <div class="row mb-2 mx-lg-5 ps-lg-5 up-footer">
+
+        <!-- Coordonnées postales : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-person-vcard-fill text-white me-1"></i>Nous contacter</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+                <li class="mb-1 p-0 text-light">
+                    <i class="bi bi-envelope-fill text-warning me-1"></i>
+                    <p class="m-0 ms-2 d-inline">Lycée Léonard de Vinci</p>
+                    <p class="m-0 ms-4">2, bis rue Edouard Branly</p>
+                    <p class=" ms-4">77000 MELUN CEDEX</p>
+                </li>
+                <li class="mb-1 p-0 text-light icon">
+                    <i class="bi-telephone-fill text-warning me-2"></i>
+                    +33 1 60 60 56 60
+                </li>                
+                <li class="mb-1 p-0 text-light">
+                    <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                    <a class="nav-link d-inline" href="https://maps.google.com/?q=Lyc%C3%A9e%20Vinci,%20Melun" target="_blank" title="Nous voir sur Map">Google Map</a>
+                </li>
+        </ul>
+        </div>
+
+        <!-- Réseaux sociaux : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-megaphone-fill text-white me-1"></i>Nous suivre</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+            
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.instagram.com/augusteam.ldv"
+                       target="_blank"
+                       title="Aller sur notre Instagram">
+                    <i class="bi bi-instagram text-warning me-2"></i>
+                    Instagram
+                    </a>
+                </li>   
+            
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.facebook.com/AugustineShellEco"
+                       target="_blank"
+                       title="Aller sur notre Facebook">
+                    <i class="bi bi-facebook text-warning me-2"></i>
+                    Facebook
+                    </a>
+                </li>   
+                          
+        </ul>
+        </div>
+
+        <!-- Autres sites : -->
+        <div class="col-12 col-md-4">
+        <p class="text-start text-warning icon-link"><i class="bi-signpost-2-fill text-white me-1"></i>Autres liens</p>
+        <ul class="flex-column text-start list-unstyled ms-3">
+            
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.vinci-melun.org/"
+                       target="_blank">
+                    <img class="me-2"
+                         src="/theme/img/icones/ldv.png"
+                         style="width: 1.3em">Site du lycée
+                    </a>
+                </li>
+            
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.shellecomarathon.com/"
+                       target="_blank">
+                    <img class="me-2"
+                         src="/theme/img/icones/shell-flat.png"
+                         style="width: 1.3em">Site Shell Eco-Marathon
+                    </a>
+                </li>
+            
+                <li class="mb-1 p-0 text-light">
+                    <a class="nav-link d-inline"
+                       href="https://www.shell.fr/energie-innovation/shell-eco-marathon.html"
+                       target="_blank">
+                    <img class="me-2"
+                         src="/theme/img/icones/shell-flat.png"
+                         style="width: 1.3em">Site Shell Eco-Marathon France
+                    </a>
+                </li>
+                            
+        </ul>
+        </div>                
+
+        </div>
+
+        <!-- Informations bas de page : -->
+        <div class="row pt-3 pb-3 m-0 text-center text-light border-top border-2 low-footer">
+            
+                <p class="p-0 m-0">Section de Technicien Supérieur <b>CPI</b> du Lycée <b>Léonard de Vinci</b></b></p>                
+            
+                <p class="p-0 m-0">Site développé par la S.T.S. <b>SIO</b> du Lycée <b>Léonard de Vinci</b></b></p>                
+            
+        </div>
+        
+    </div>
+</footer>
+
+
+
+    
+    
+
+
+    <!-- Bootstrap partie JS via CDN : -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script JS : -->
+    <script src="/theme/js/main.js"></script>
+</body>
+</html>
