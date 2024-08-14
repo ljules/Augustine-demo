@@ -71,28 +71,28 @@ MENUITEMS = [("LdV", "https://www.vinci-melun.org/")] # Une liste de tuples (Tit
 
 # Navigation SPECIFIQUE au thème AUGUSTINE :
 # ((nom, url, icone, (nom, url, icone)),...)
-NAV_SITE_AUGUSTINE = (("Home", SITEURL + "/", "bi bi-house-fill", None),
+NAV_SITE_AUGUSTINE = (("Home", "/", "bi bi-house-fill", None),
                       ("Articles", "", "feather", (
-                            ("Archive des articles", SITEURL + "/archives"),
-                            ("Liste des catégories", SITEURL + "/categories"),
-                            ("Liste des auteurs", SITEURL + "/authors"),
-                            ("Liste des mots clés", SITEURL + "/tags"))),
+                            ("Archive des articles", "/archives"),
+                            ("Liste des catégories", "/categories"),
+                            ("Liste des auteurs", "/authors"),
+                            ("Liste des mots clés", "/tags"))),
                       ("Equipes", "", "people-fill", (
-                            ("Trombinoscope", SITEURL + "/pages/trombi"),
-                            ("Liste des équipes", SITEURL + "/pages/equipes"))),
+                            ("Trombinoscope", "/pages/trombi"),
+                            ("Liste des équipes", "/pages/equipes"))),
                       ("Galerie", "", "image-fill", []),
                       ("Véhicules", "", "ev-front-fill", (
-                          ("Augustine I", SITEURL + "/pages/augustine-1"),
-                          ("Augustine II", SITEURL + "/pages/augustine-2"),
-                          ("Augustine III", SITEURL + "/pages/augustine-3"),
-                          ("Augustine IV", SITEURL + "/pages/augustine-4"),
-                          ("Augustine V", SITEURL + "/pages/augustine-5"))),
-                      ("Performances", SITEURL + "/pages/performances", "trophy-fill", None),
+                          ("Augustine I", "/pages/augustine-1"),
+                          ("Augustine II", "/pages/augustine-2"),
+                          ("Augustine III", "/pages/augustine-3"),
+                          ("Augustine IV", "/pages/augustine-4"),
+                          ("Augustine V", "/pages/augustine-5"))),
+                      ("Performances", "/pages/performances", "trophy-fill", None),
                       ("A propos", "", "info-circle-fill", (
-                          ("De nous", SITEURL + "/pages/a-propos-de-nous"),
-                          ("De l'Eco-marathon", SITEURL + "/pages/a-propos-du-shell"),
-                          ("On parle de nous", SITEURL + "/pages/on-parle-de-nous"),
-                          ("Devenir partenaire", SITEURL + "/pages/devenir-partenaire")))
+                          ("De nous", "/pages/a-propos-de-nous"),
+                          ("De l'Eco-marathon", "/pages/a-propos-du-shell"),
+                          ("On parle de nous", "/pages/on-parle-de-nous"),
+                          ("Devenir partenaire", "/pages/devenir-partenaire")))
                     )
 
 
