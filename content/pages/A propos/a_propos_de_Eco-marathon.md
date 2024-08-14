@@ -11,7 +11,7 @@ L'héritage de l'Eco-marathon remonte à 1939 ! Tout commence ave le directeur d
 
 Mais la compétition moderne, début officiellement en en France en 1985, le **Shell Eco-marathon** rassemble des milliers d’étudiants passionnés par les problématiques énergétiques à travers le monde. Véritable plateforme éducative, la compétition invite les étudiants à mettre en application leurs connaissances pour concevoir, construire et faire concourir les véhicules les plus performants possibles en matière d’efficacité énergétique.
 
-<img src="{static}/images/img_pages/Logo_Shell_Eco-marathon.png" width="400" alt="Logo du Shell Eco-marathon">
+![Logo du Shell Eco-marathon](/images/img_pages/Logo_Shell_Eco-marathon.png)
 
 ## Quelques chiffres :
 Depuis ses débuts, plus de 100 000 étudiant d'une centaine d'écoles/univertisés de 60 pays on pris part au challenge.

@@ -75,9 +75,10 @@ def modify_navigation_bar(generator):
     if len(nav_bar) > 3 and isinstance(nav_bar[3], tuple) and len(nav_bar[3]) > 2 and isinstance(nav_bar[3][3], list):
                         
         # Ajout des sous-menus :
-        site_url = generator.settings.get('SITEURL', '')
+        site_url = ""
+        #site_url = generator.settings.get('SITEURL', '')        
         for key in DICO_GALERY.keys():
-            nav_entry = (key, f"{site_url}/pages/{key}")
+            nav_entry = (key, f"{site_url}/pages/{key}") 
             if nav_entry not in nav_bar[3][3]: 
                 nav_bar[3][3].append(nav_entry)
                 logger.info(f"Ajouté à la navigation : {nav_entry}")

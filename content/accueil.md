@@ -3,8 +3,9 @@
 Bienvenue sur notre site. Vous trouverez ici toutes les informations à propos de notre aventure, véhicules, participations et plus encore.
 Nous sommes une équipe de professeurs et d'étudiants qui prennons part chaque année au pretigieux challenge mondial **Shell Eco-Marathon**
 
-![Augustine sur le circuit de Londres](images/img_pages/34046196344_6565d4c3d1_o.jpg)
-![Equipe 2015](<images/img_pages/TEAM 2015.jpg>)
+![Augustine sur le circuit de Londres](/images/img_pages/34046196344_6565d4c3d1_o.jpg)
+
+![Equipe 2015](</images/img_pages/TEAM 2015.jpg>)
 
 ## Qui sommes-nous ?
 

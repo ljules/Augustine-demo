@@ -12,6 +12,6 @@ Nos étudiants déjà nostalgique de l'aventure passé à Nogaro ont monté de v
 
 ## Vidéos :
 
-<video controls src="../../../videos/Shell-2024/videos-etudiants/Video-2024-05-25-at-21-57-55.mp4" title="Aventure Shell 2024"></video>
+<video controls src="/videos/Shell-2024/videos-etudiants/Video-2024-05-25-at-21-57-55.mp4" title="Aventure Shell 2024"></video>
 
-<video controls src="../../../videos/Shell-2024/videos-etudiants/Video-2024-05-25-at-21-57-56.mp4" title="Souvenir Shell 2024"></video>
+<video controls src="/videos/Shell-2024/videos-etudiants/Video-2024-05-25-at-21-57-56.mp4" title="Souvenir Shell 2024"></video>

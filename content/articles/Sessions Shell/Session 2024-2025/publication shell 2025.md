@@ -19,17 +19,15 @@ L'année à venir se présente comme un futur défi logistique pour notre équip
 Notre équipe est enthousiaste !
 
 ## Vue d'oiseau du circuit de Silesia :
-![Vue d'oiseau du circuit](../../../images/Shell-2025/Decouverte-circuit-Silesia/Vue-oiseau-Silesia-Ring-2.jpg)
+![Vue d'oiseau du circuit](/images/Shell-2025/Decouverte-circuit-Silesia/Vue-oiseau-Silesia-Ring-2.jpg)
+
 
 ## Le plan général du circuit :
-<img src="../images/Shell-2025/Decouverte-circuit-Silesia/Plan-general-circuit-de-Silesia.jpg" alt="Plan du circuit" width="100%">
-
+![Plan du circuit](/images/Shell-2025/Decouverte-circuit-Silesia/Plan-general-circuit-de-Silesia.jpg)
 
 ## Configuration du circuit :
 Le circuit dispose de 7 configurations possibles ! Voici ci-dessous les 6 configurations alternatives, mais pour le moment nous ne savons pas quel sera le parcours pour l'Eco-Marathon...
 
-<img src="../images/Shell-2025/Decouverte-circuit-Silesia/configurations-circuit-Silesia.png" alt="Configurations alternatives du circuit" width="100%">
-
-
+![Configurations alternatives du circuit](/images/Shell-2025/Decouverte-circuit-Silesia/configurations-circuit-Silesia.png)
 
 
