@@ -11,11 +11,13 @@
 import logging
 import os
 
+# Décommenter le code ci-dessous pour activer le journal de log :
+"""
 # Définir le chemin complet pour le fichier de log
 LOG_FILE = os.path.join(os.path.dirname(__file__), 'pelican_debug.log')
 
 # Configuration du logger
-logger = logging.getLogger()
+logger = logging.getLogger()   
 logger.setLevel(logging.DEBUG)
 
 # Créer un gestionnaire pour écrire les logs dans un fichier
@@ -31,7 +33,7 @@ logger.addHandler(file_handler)
 # console_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 # console_handler.setFormatter(console_formatter)
 # logger.addHandler(console_handler)
-
+"""
 
 
 # INFORMATIONS GENERALES DU SITE :
@@ -71,7 +73,7 @@ MENUITEMS = [("LdV", "https://www.vinci-melun.org/")] # Une liste de tuples (Tit
 
 # Navigation SPECIFIQUE au thème AUGUSTINE :
 # ((nom, url, icone, (nom, url, icone)),...)
-NAV_SITE_AUGUSTINE = (("Home", "/", "bi bi-house-fill", None),
+NAV_SITE_AUGUSTINE = (#("Home", "/", "bi bi-house-fill", None),
                       ("Articles", "", "feather", (
                             ("Archive des articles", "/archives"),
                             ("Liste des catégories", "/categories"),
@@ -80,7 +82,7 @@ NAV_SITE_AUGUSTINE = (("Home", "/", "bi bi-house-fill", None),
                       ("Equipes", "", "people-fill", (
                             ("Trombinoscope", "/pages/trombi"),
                             ("Liste des équipes", "/pages/equipes"))),
-                      ("Galerie", "", "image-fill", []),
+                      ("Galerie", "", "image-fill", []), # ATTENTION : L'indice de la galerie doit être renseignée dans le plugin gallery_plugin
                       ("Véhicules", "", "ev-front-fill", (
                           ("Augustine I", "/pages/augustine-1"),
                           ("Augustine II", "/pages/augustine-2"),

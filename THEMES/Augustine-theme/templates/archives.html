@@ -38,25 +38,27 @@ Cette page du template génère la liste des articles.
 
     <!-- Tableau des articles : -->
     <section>
-        <table class="table table-striped shadow border border-2 border-dark table-bordered mx-2">
+        <table class="table table-striped shadow border border-2 border-dark table-bordered ms-1" style="width: 98%;">
             <thead class="border border-2 border-dark text-center align-middle">
                 <tr>
                     <th class="bg-secondary text-warning" scope="col">TITRE</th>
                     <th class="bg-secondary text-warning" scope="col" class="text-center">DATE</th>
                     <th class="bg-secondary text-warning" scope="col">RESUME</th>
-                    <th class="bg-secondary text-warning" scope="col">LIRE</th>
+                    <!-- <th class="bg-secondary text-warning" scope="col">LIRE</th> -->
                 </tr>
             </thead>
             <tbody>
                 {% for article in dates %}
                 <tr>
-                    <td class="fw-bold align-middle">{{ article.title }}</td>
+                    <td class="fw-bold align-middle">
+                        <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                    </td>
                     <td class="small align-middle text-center">{{ article.locale_date }}</td>
                     <td class="small fst-italic align-middle">{{ article.summary }}</td>
-                    <td class="fs-3 align-middle text-center">
+                    <!-- <td class="fs-3 align-middle text-center">
                         <a href="{{ SITEURL }}/{{ article.url }}">
                             <i class="bi bi-eye-fill"></i>
-                        </a>
+                        </a> -->
                     </td>
                 </tr>
                 {% endfor %}

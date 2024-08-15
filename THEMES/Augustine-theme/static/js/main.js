@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('navbar-transparent');
             navbar.classList.add('navbar-opaque');
         } else {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 50 || navbarCollapse.classList.contains('show')) {
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-opaque');
-            } else if (!navbarCollapse.classList.contains('show')) {
+            } else {
                 navbar.classList.remove('navbar-opaque');
                 navbar.classList.add('navbar-transparent');
             }
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour ajuster le padding-top du contenu
     function adjustContentPadding() {
-        const navbarHeight = navbar.offsetHeight + 25;
+        const navbarHeight = navbar.offsetHeight;
         if (topCarrousel.style.display === 'none') {
             content.style.paddingTop = navbarHeight + 'px';
         } else {
@@ -91,7 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
             adjustContentPadding();
         });
     }
+
+    // Rendre la navbar opaque lorsque le menu est déroulé
+    navbarCollapse.addEventListener('shown.bs.collapse', function() {
+        navbar.classList.add('navbar-opaque');
+    });
+
+    // Rendre la navbar transparente si nécessaire lorsque le menu est replié
+    navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+        updateNavbar();
+    });
 });
+
+
 
 
 

@@ -70,28 +70,23 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
             <!-- Bouton dévellopement menu en mode collapsé : -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="me-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Eléments de navigation : -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
-                        <li class="nav-item ">
-                            <a  class="nav-link  "
-                                href="https://ljules.github.io/Augustine-demo/"
-                            >
-                            <i  class="bi bi-bi bi-house-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Home</a>
-
-                        </li>
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold" style="font-size: 0.9em;">
                         <li class="nav-item dropdown">
                             <a  class="nav-link  dropdown-toggle"
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-feather d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Articles</a>
+                                Articles
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/archives">Archive des articles</a></li>
@@ -105,7 +100,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Equipes</a>
+                                Equipes
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/trombi">Trombinoscope</a></li>
@@ -117,7 +113,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-image-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Galerie</a>
+                                Galerie
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/2015">2015</a></li>
@@ -135,7 +132,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-ev-front-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Véhicules</a>
+                                Véhicules
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/augustine-1">Augustine I</a></li>
@@ -150,7 +148,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo/pages/performances"
                             >
                             <i  class="bi bi-trophy-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Performances</a>
+                                Performances
+                            </a>
 
                         </li>
                         <li class="nav-item dropdown">
@@ -158,7 +157,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-info-circle-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            A propos</a>
+                                A propos
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/a-propos-de-nous">De nous</a></li>
@@ -255,7 +255,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                 </div>
             
                 <!-- Éléments alignés à droite -->
-                <div class="small d-flex align-items-center ms-auto" style="color:var(--nav-link-active);">
+                <div class="small d-flex align-items-center ms-auto pe-2" style="color:var(--nav-link-active);">
                     <i class="bi bi-arrows-expand me-2"></i>
                     <div class="form-check form-switch mt-1">
                         <input  class="form-check-input"
@@ -313,175 +313,356 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
         </div>
     </div>
     
-    <table class="table table-striped table-hover shadow border border-1s border-black table-bordered text-center ms-2">
+    <!-- Tableau de l'historique des performances : -->
+         
+    <table class="table table-striped table-hover shadow border border-1s border-black table-bordered text-center ms-1"
+           style="width: 95%">
         <thead>
-            <tr class="align-middle">
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-calendar-week"></i></p><p class="m-0 p-0 small text-white">Session</p></th>                
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-globe-europe-africa"></i></p><p class="m-0 p-0 small text-white">Pays</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-geo-alt"></i></p><p class="m-0 p-0 small text-white">Circuit/ville</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-pencil-square"></i></p><p class="m-0 p-0 small text-white">Commentaire</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-ev-front"></i></p><p class="m-0 p-0 small text-white">Véhicule</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-trophy"></i></p><p class="m-0 p-0 small text-white">Classement</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-battery-half"></i></p><p class="m-0 p-0 small text-white">Consommation</p><p class="m-0 p-0 small text-white">(km/kW.h)</p></th>
+            <tr class="align-middle" style="font-size: 0.8em;">
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-calendar-week"></i></p><p class="m-0 p-0 small text-white">Session</p></th>                
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-globe-europe-africa"></i></p><p class="m-0 p-0 small text-white">Pays</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-geo-alt"></i></p><p class="m-0 p-0 small text-white">Circuit</p></th>
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-pencil-square"></i></p><p class="m-0 p-0 small text-white">Commentaire</p></th>
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-ev-front"></i></p><p class="m-0 p-0 small text-white">Véhicule</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-trophy"></i></p><p class="m-0 p-0 small text-white">Rang</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-battery-half"></i></p><p class="m-0 p-0 small text-white">Conso.</p><p class="m-0 p-0 small text-white">(km/kW.h)</p></th>
             </tr>
         </thead>
 
         <tbody>
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2015</th>
                         
-                        <td >Pays-Bas</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Pays-Bas
+                        </td>
                         
-                        <td >Rotterdam</td>
+                        <td  class= "
+                        ">
+                            Rotterdam
+                        </td>
                         
-                        <td  class="small" >30 ans de l'Eco-marathon</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            30 ans de l'Eco-marathon
+                        </td>
                         
-                        <td >Augustine III</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine III
+                        </td>
                         
-                        <td >5</td>
+                        <td  class= "
+                        ">
+                            5
+                        </td>
                         
-                        <td >602</td>
+                        <td  class= "
+                        ">
+                            602
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2016</th>
                         
-                        <td >Royaume-Uni</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Royaume-Uni
+                        </td>
                         
-                        <td >Londres</td>
+                        <td  class= "
+                        ">
+                            Londres
+                        </td>
                         
-                        <td  class="small" >Circuit sur le site Olympique</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit sur le site Olympique
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2017</th>
                         
-                        <td >Royaume-Uni</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Royaume-Uni
+                        </td>
                         
-                        <td >Londres</td>
+                        <td  class= "
+                        ">
+                            Londres
+                        </td>
                         
-                        <td  class="small" >Circuit sur le site Olympique</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit sur le site Olympique
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2018</th>
                         
-                        <td >Royaume-Uni</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Royaume-Uni
+                        </td>
                         
-                        <td >Londres</td>
+                        <td  class= "
+                        ">
+                            Londres
+                        </td>
                         
-                        <td  class="small" >Circuit sur le site Olympique</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit sur le site Olympique
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td >5</td>
+                        <td  class= "
+                        ">
+                            5
+                        </td>
                         
-                        <td >535</td>
+                        <td  class= "
+                        ">
+                            535
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2019</th>
                         
-                        <td >Royaume-Uni</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Royaume-Uni
+                        </td>
                         
-                        <td >Londres</td>
+                        <td  class= "
+                        ">
+                            Londres
+                        </td>
                         
-                        <td  class="small" >Circuit d'essai Mercedes</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit d'essai Mercedes
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td >680</td>
+                        <td  class= "
+                        ">
+                            680
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2020</th>
                         
-                        <td ></td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td  class="small" >Confinement COVID</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Confinement COVID
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2021</th>
                         
-                        <td ></td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td  class="small" >Confinement COVID</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Confinement COVID
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                         
-                        <td ></td>
+                        <td  class= "
+                        ">
+                            
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2022</th>
                         
-                        <td >France</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            France
+                        </td>
                         
-                        <td >Nogaro</td>
+                        <td  class= "
+                        ">
+                            Nogaro
+                        </td>
                         
-                        <td  class="small" >Circuit Paul Armagnac</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit Paul Armagnac
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td >3</td>
+                        <td  class= "
+                        ">
+                            3
+                        </td>
                         
-                        <td >748</td>
+                        <td  class= "
+                        ">
+                            748
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2023</th>
                         
-                        <td >France</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            France
+                        </td>
                         
-                        <td >Nogaro</td>
+                        <td  class= "
+                        ">
+                            Nogaro
+                        </td>
                         
-                        <td  class="small" >Circuit Paul Armagnac</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit Paul Armagnac
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td >6</td>
+                        <td  class= "
+                        ">
+                            6
+                        </td>
                         
-                        <td >665</td>
+                        <td  class= "
+                        ">
+                            665
+                        </td>
                 </tr> 
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">2024</th>
                         
-                        <td >France</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            France
+                        </td>
                         
-                        <td >Nogaro</td>
+                        <td  class= "
+                        ">
+                            Nogaro
+                        </td>
                         
-                        <td  class="small" >Circuit Paul Armagnac</td>
+                        <td  class= "
+ small  d-none d-lg-table-cell                         ">
+                            Circuit Paul Armagnac
+                        </td>
                         
-                        <td >Augustine IV</td>
+                        <td  class= "
+ d-none d-lg-table-cell                         ">
+                            Augustine IV
+                        </td>
                         
-                        <td >5</td>
+                        <td  class= "
+                        ">
+                            5
+                        </td>
                         
-                        <td >834</td>
+                        <td  class= "
+                        ">
+                            834
+                        </td>
                 </tr> 
              
         </tbody>
-    </table>
-            
-    
+    </table>      
 
         </div>
 
@@ -494,7 +675,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
 <!-- OPTIONAL NAVBAR : -->
- <div class="footer bg-dark mt-5">
+ <div class="footer bg-dark mt-5 py-1 px-4">
 
     <nav class="container text-center p-0">
         <div class="row">
@@ -516,7 +697,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
 <!-- FOOTER : -->
-<footer class="footer mt-0 pt-4 couleur-fond-tete-pied">
+<footer class="footer m-0 pt-4 couleur-fond-tete-pied">
 
     <!-- MAIN FOOTER : -->
     <div class="container">
@@ -625,5 +806,6 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
     <!-- Script JS : -->
     <script src="https://ljules.github.io/Augustine-demo/theme/js/main.js"></script>
+
 </body>
 </html>

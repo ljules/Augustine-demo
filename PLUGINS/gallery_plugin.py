@@ -42,6 +42,8 @@ from thumbnail_generator import generate_thumbnails  # Import de la fonction
 # Dimension des thumbnail en pixel :
 THUMBNAIL_SIZE = 256
 
+# Numéro d'indice de l'entrée de Galerie dans le tuple NAV_SITE_AUGUSTINE du fichier peliconf.py
+INDICE_GALERIE = 2
 
 # Dictionnaire global pour stocker les galeries
 DICO_GALERY = {}
@@ -72,15 +74,15 @@ def modify_navigation_bar(generator):
     logger.info("Modification de la barre de navigation.")
     nav_bar = generator.settings.get('NAV_SITE_AUGUSTINE', [])
     
-    if len(nav_bar) > 3 and isinstance(nav_bar[3], tuple) and len(nav_bar[3]) > 2 and isinstance(nav_bar[3][3], list):
+    if len(nav_bar) > INDICE_GALERIE and isinstance(nav_bar[INDICE_GALERIE], tuple) and len(nav_bar[INDICE_GALERIE]) > 2 and isinstance(nav_bar[INDICE_GALERIE][3], list):
                         
         # Ajout des sous-menus :
         site_url = ""
         #site_url = generator.settings.get('SITEURL', '')        
         for key in DICO_GALERY.keys():
             nav_entry = (key, f"{site_url}/pages/{key}") 
-            if nav_entry not in nav_bar[3][3]: 
-                nav_bar[3][3].append(nav_entry)
+            if nav_entry not in nav_bar[INDICE_GALERIE][3]: 
+                nav_bar[INDICE_GALERIE][3].append(nav_entry)
                 logger.info(f"Ajouté à la navigation : {nav_entry}")
     else:
         logger.warning("La structure NAV_SITE_AUGUSTINE n'est pas conforme à ce qui est attendu.")

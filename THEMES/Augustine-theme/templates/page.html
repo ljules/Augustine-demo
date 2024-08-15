@@ -29,10 +29,10 @@ Cette page du template définira les pages statiques du site.
 
 <!-- CONTENU SOUS-EN-TETE : -->
 {% block contenu_sous_tete %}
-<div class="text-light py-1 small">
-   <span><i class="bi bi-file-earmark-text-fill me-2 text-warning"></i><b class="text-warning"></b></span>
-   {{ page.title }}
-</div>    
+    <div class="text-light py-1 small">
+        <span><i class="bi bi-file-earmark-text-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+        {{ page.title }}
+    </div>    
 {% endblock %}
 
 
@@ -40,7 +40,7 @@ Cette page du template définira les pages statiques du site.
 {% block content %}
     <div class="border rounded-4 bg-body-secondary shadow">
     <section>
-        <div class="ps-4 pt-3 pb-2 bg-dark text-warning rounded-top-4 text-capitalize fw-bold">
+        <div class="ps-4 pt-3 pb-2 bg-dark text-warning rounded-top-4 text-capitalize fw-bold fs-5">
             <h1>{{ page.title }}</h1>
         </div>
         

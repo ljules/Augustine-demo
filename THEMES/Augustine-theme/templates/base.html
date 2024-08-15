@@ -66,14 +66,16 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
             <!-- Bouton dévellopement menu en mode collapsé : -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="me-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Eléments de navigation : -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold" style="font-size: 0.9em;">
                     {% for nom, url, icone, sousNav in NAV_SITE_AUGUSTINE %}
                         <li class="nav-item {% if sousNav != None %}dropdown{% endif %}">
                             <a  class="nav-link {# active #} {% if sousNav != None %}dropdown-toggle{% endif %}"
@@ -83,7 +85,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 {% if sousNav != None %} aria-expanded="false" {% endif %}
                             >
                             <i  class="bi bi-{{ icone }} d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            {{ nom }}</a>
+                                {{ nom }}
+                            </a>
 
                             {% if sousNav != None %}
                                 <ul class="dropdown-menu bg-dark-subtle">
@@ -163,7 +166,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                 </div>
             
                 <!-- Éléments alignés à droite -->
-                <div class="small d-flex align-items-center ms-auto" style="color:var(--nav-link-active);">
+                <div class="small d-flex align-items-center ms-auto pe-2" style="color:var(--nav-link-active);">
                     <i class="bi bi-arrows-expand me-2"></i>
                     <div class="form-check form-switch mt-1">
                         <input  class="form-check-input"
@@ -233,13 +236,13 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
 <!-- OPTIONAL NAVBAR : -->
- <div class="footer bg-dark mt-5">
+ <div class="footer bg-dark mt-5 py-1 px-4">
     {% block bottom_nav_bar %} {% endblock %}
  </div>
 
 
 <!-- FOOTER : -->
-<footer class="footer mt-0 pt-4 couleur-fond-tete-pied">
+<footer class="footer m-0 pt-4 couleur-fond-tete-pied">
 
     <!-- MAIN FOOTER : -->
     <div class="container">
@@ -326,5 +329,6 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
     <!-- Script JS : -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+
 </body>
 </html>

@@ -20,15 +20,15 @@ l'affichage d'une page avec les équipes en exploitant le dictionnaire dico_team
 
 <!-- CONTENU SOUS-EN-TETE : -->
 {% block contenu_sous_tete %}
-<div class="text-light py-1 small">
-   <span><i class="bi bi-people-fill me-2 text-warning"></i><b class="text-warning"></b></span>
-   {{ page.title }}
-</div>    
+    <div class="text-light py-1 small">
+        <span><i class="bi bi-people-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+        {{ page.title }}
+    </div>  
 {% endblock %}
 
 
 {% block content %}
-    <div class="row">
+    <div class="row" style="width: 98%">
 
         <!-- Titre : -->
         <div class="d-flex m-0 mb-3">
@@ -43,10 +43,10 @@ l'affichage d'une page avec les équipes en exploitant le dictionnaire dico_team
 
 
         <!-- Choix de l'année de la session de l'Eco-Marathon : -->
-        <div class="col d-inline-flex align-items-baseline m-0 p-3 ms-3 rounded-3 small text-warning" style="background-color:rgb(50, 50, 50)">
+        <div class="col d-inline-flex align-items-baseline m-0 p-3 ms-3 rounded-3 small text-warning" style="background-color:rgb(50, 50, 50);">
             Veuillez choisir l'année de la session de course pour afficher l'équipe correspondante :  
-            <select class="form-select ms-2" style="width:200px" id="year-select">
-                </option><option value="default" selected><i>Choix de la session</i></option>
+            <select class="form-select ms-2" style="width:150px" id="year-select">
+                </option><option value="default" selected><i>Session</i></option>
 
                 {% for annee in DICO_TROMBI %}
                     <option value="team-{{ annee }}">{{ annee }}</option>
@@ -59,7 +59,7 @@ l'affichage d'une page avec les équipes en exploitant le dictionnaire dico_team
 
     {% for annee in DICO_TROMBI %}
 
-        <div class="container mx-0 my-4 p-0 border border-1 border-black text-black" id="team-{{ annee }}">
+        <div class="container mx-1 my-4 p-0 border border-1 border-black text-black" id="team-{{ annee }}" style="width: 98%">
             <div class="row m-0">
                 <h2 class="col m-0 p-1 bg-warning border border-1 border-black fw-bold">
                     Equipe de la session {{ annee }}
@@ -72,7 +72,7 @@ l'affichage d'une page avec les équipes en exploitant le dictionnaire dico_team
                     <img src="{{ SITEURL }}/trombi/team_{{ annee }}.jpg"
                     alt="Photo de {{ annee }}"
                     class="mt-1 rounded-0"
-                    style="max-width:900px;">
+                    style="max-width: 90%;">
 
                     <p class="fw-bold mt-2 mb-1 text-secondary">La photo de groupe {{ annee}}</p>
                 </div>

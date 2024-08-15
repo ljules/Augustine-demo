@@ -70,28 +70,23 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
             <!-- Bouton dévellopement menu en mode collapsé : -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="me-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Eléments de navigation : -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold">
-                        <li class="nav-item ">
-                            <a  class="nav-link  "
-                                href="https://ljules.github.io/Augustine-demo/"
-                            >
-                            <i  class="bi bi-bi bi-house-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Home</a>
-
-                        </li>
+                <ul class="navbar-nav nav-underline  mb-2 mb-md-0 mt-2 fw-bold" style="font-size: 0.9em;">
                         <li class="nav-item dropdown">
                             <a  class="nav-link  dropdown-toggle"
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-feather d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Articles</a>
+                                Articles
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/archives">Archive des articles</a></li>
@@ -105,7 +100,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Equipes</a>
+                                Equipes
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/trombi">Trombinoscope</a></li>
@@ -117,7 +113,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-image-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Galerie</a>
+                                Galerie
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/2015">2015</a></li>
@@ -135,7 +132,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-ev-front-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Véhicules</a>
+                                Véhicules
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/augustine-1">Augustine I</a></li>
@@ -150,7 +148,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo/pages/performances"
                             >
                             <i  class="bi bi-trophy-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            Performances</a>
+                                Performances
+                            </a>
 
                         </li>
                         <li class="nav-item dropdown">
@@ -158,7 +157,8 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                                 href="https://ljules.github.io/Augustine-demo"
  data-bs-toggle="dropdown"  aria-expanded="false"                             >
                             <i  class="bi bi-info-circle-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                            A propos</a>
+                                A propos
+                            </a>
 
                                 <ul class="dropdown-menu bg-dark-subtle">
                                         <li><a class="dropdown-item" href="https://ljules.github.io/Augustine-demo/pages/a-propos-de-nous">De nous</a></li>
@@ -248,14 +248,14 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
             <div class="d-flex align-items-center justify-content-between">
                 <!-- Éléments alignés à gauche -->
                 <div class="d-flex align-items-center">
-<div class="text-light py-1 small">
-   <span><i class="bi bi-person-badge-fill me-2 text-warning"></i><b class="text-warning"></b></span>
-   Trombi
-</div>    
+    <div class="text-light py-1 small">
+        <span><i class="bi bi-person-badge-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+        Trombi
+    </div>    
                 </div>
             
                 <!-- Éléments alignés à droite -->
-                <div class="small d-flex align-items-center ms-auto" style="color:var(--nav-link-active);">
+                <div class="small d-flex align-items-center ms-auto pe-2" style="color:var(--nav-link-active);">
                     <i class="bi bi-arrows-expand me-2"></i>
                     <div class="form-check form-switch mt-1">
                         <input  class="form-check-input"
@@ -309,8 +309,14 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
             <i class="bi bi-person-badge-fill text-dark"></i>
         </div>
         <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
-        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 d-flex align-items-center shadow section-titre">
-            <b class="me-2 text-light">Trombinoscope :</b> Tous les membres depuis 2015
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 align-items-center shadow section-titre">
+            <div>
+                <b class="me-2 text-light">Trombinoscope :</b>
+            </div>
+            <div>
+                Tous les membres depuis 2015
+            </div>
+             
         </div>
     </div>
 
@@ -369,8 +375,10 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
     <!-- AFFICHAGE DES VIGNETTES : -->
-    <div class="row">
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item responsable de la stratégie et de la perspective. encadrant" style="min-width:250px;">
+    <div class="row mx-1">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item responsable de la stratégie et de la perspective. encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -418,7 +426,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -468,7 +478,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -518,7 +530,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -568,7 +582,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -618,7 +634,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -668,7 +686,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrante, traductrice anglais encadrant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrante, traductrice anglais encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -715,7 +735,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -765,7 +787,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -815,7 +839,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item développement électrique, électronique et informatique du projet encadrant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item développement électrique, électronique et informatique du projet encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -863,7 +889,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -913,7 +941,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrant encadrant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item encadrant encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -963,7 +993,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item pilote étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1013,7 +1045,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1063,7 +1097,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item manager étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1113,7 +1149,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1163,7 +1201,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1214,7 +1254,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item  encadrant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item  encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -1262,7 +1304,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item organisateur principal, responsable de la communication. encadrant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item organisateur principal, responsable de la communication. encadrant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         encadrant
@@ -1311,7 +1355,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1361,7 +1407,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1411,7 +1459,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1461,7 +1511,9 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
                     </ul>
                 </div>   
             </div>
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item équipier étudiant"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         étudiant
@@ -1608,7 +1660,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
 <!-- OPTIONAL NAVBAR : -->
- <div class="footer bg-dark mt-5">
+ <div class="footer bg-dark mt-5 py-1 px-4">
 
     <nav class="container text-center p-0">
         <div class="row">
@@ -1630,7 +1682,7 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
 
 <!-- FOOTER : -->
-<footer class="footer mt-0 pt-4 couleur-fond-tete-pied">
+<footer class="footer m-0 pt-4 couleur-fond-tete-pied">
 
     <!-- MAIN FOOTER : -->
     <div class="container">
@@ -1739,5 +1791,6 @@ Il permet ainsi de définir l'entête et le pied de page de toutes les pages du 
 
     <!-- Script JS : -->
     <script src="https://ljules.github.io/Augustine-demo/theme/js/main.js"></script>
+
 </body>
 </html>

@@ -19,10 +19,10 @@ l'affichage d'une page avec les trombis.
 
 <!-- CONTENU SOUS-EN-TETE : -->
 {% block contenu_sous_tete %}
-<div class="text-light py-1 small">
-   <span><i class="bi bi-person-badge-fill me-2 text-warning"></i><b class="text-warning"></b></span>
-   {{ page.title }}
-</div>    
+    <div class="text-light py-1 small">
+        <span><i class="bi bi-person-badge-fill me-2 text-warning"></i><b class="text-warning"></b></span>
+        {{ page.title }}
+    </div>    
 {% endblock %}
 
 {% block content %}
@@ -34,8 +34,14 @@ l'affichage d'une page avec les trombis.
             <i class="bi bi-person-badge-fill text-dark"></i>
         </div>
         <div class="m-0 bg-secondary shadow" style="width: 5px;"></div>
-        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 d-flex align-items-center shadow section-titre">
-            <b class="me-2 text-light">Trombinoscope :</b> Tous les membres depuis 2015
+        <div class="flex-grow-1 p-1 ps-3 pe-4 rounded-end-3 text-warning fs-5 align-items-center shadow section-titre">
+            <div>
+                <b class="me-2 text-light">Trombinoscope :</b>
+            </div>
+            <div>
+                Tous les membres depuis 2015
+            </div>
+             
         </div>
     </div>
 
@@ -94,9 +100,11 @@ l'affichage d'une page avec les trombis.
 
 
     <!-- AFFICHAGE DES VIGNETTES : -->
-    <div class="row">
+    <div class="row mx-1">
         {% for trombi in TROMBI_COLLECTION %}
-            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item {{ trombi.role | lower }} {{ trombi.fonction | lower }}" style="min-width:250px;">
+
+            <div class="col m-2 shadow border border-2 border-warning rounded-2 p-0 trombi-item {{ trombi.role | lower }} {{ trombi.fonction | lower }}"
+                 style="min-width:250px; max-width: 350px;">
                 <div class="bg-warning text-center m-0 py-1" style="height:40px;">
                     <p class="fw-bold fs-5 m-0 p-0 text-uppercase">
                         {{ trombi.fonction }}

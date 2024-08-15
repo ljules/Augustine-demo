@@ -89,18 +89,21 @@ ______________________________________________
 
 body {
     font-family: var(--typo-generale);
+    font-size: 15px;
 }
 
+
+
 h1 {
-    font-size: 1.3em;
+    font-size: 1.25em;
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 h3 {
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 h4 {
@@ -440,24 +443,27 @@ Mise en page de l'accueil :
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
+    padding-right: 10 px;
     
     margin-bottom: 1.8em;
 }
 
 .accueil h2 {
     margin-left: 1em;
+    margin-right: 1em;
     margin-top: 2em;
     margin-bottom: 0.8em;
 
     font-weight: bold;
     text-decoration: underline;
     color: rgb(55, 55, 55);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); */
 }
 
 
 .accueil p {
     margin-left: 2em;
+    margin-right: 1em;
 }
 
 .accueil ul {
@@ -469,7 +475,7 @@ Mise en page de l'accueil :
 .accueil p img {
     display: block; /* Transformer les images en éléments de bloc */
     margin: 0.8em auto; /* Centre les images horizontalement avec une marge autour */
-    max-width: 100%;
+    max-width: 90%;
     max-height: 400px;
     border-radius: 2%;
     /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); */
@@ -502,6 +508,7 @@ Mise en page du contenu des articles :
 
 .article-contenu h1 {
     margin-bottom: 1em;
+    margin-right: 1em;
     color: var(--bs-dark);
     font-weight: bold;
     text-decoration: underline;
@@ -512,6 +519,7 @@ Mise en page du contenu des articles :
     margin-top: 1.5em;
     margin-bottom: 1em;
     margin-left: 0.5em;
+    margin-right: 1em;
     font-weight: bold;
     color: var(--bs-dark);
     text-decoration: underline;
@@ -521,6 +529,7 @@ Mise en page du contenu des articles :
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
+    margin-right: 1em;
     font-weight: bold;
     color: var(--bs-dark);
     text-decoration: underline;
@@ -528,6 +537,7 @@ Mise en page du contenu des articles :
 
 .article-contenu p {
     margin-left: 1.5em;
+    margin-right: 1em;
 }
 
 .article-contenu ul {
@@ -568,6 +578,7 @@ Mise en page des contenus & pages :
 
 .extra-contenu h1 {
     margin-bottom: 1em;
+    margin-right: 1em;
     color: var(--bs-dark);
     font-weight: bold;
     text-decoration: underline;
@@ -578,6 +589,7 @@ Mise en page des contenus & pages :
     margin-top: 1.5em;
     margin-bottom: 1em;
     margin-left: 1em;
+    margin-right: 1em;
     font-weight: bold;
     color: var(--bs-dark);
     text-decoration: underline;
@@ -588,6 +600,7 @@ Mise en page des contenus & pages :
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1.5em;
+    margin-right: 1em;
     font-weight: bold;
     color: var(--bs-dark);
     text-decoration: underline;
@@ -598,18 +611,31 @@ Mise en page des contenus & pages :
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1.7em;
+    margin-right: 1em;
     font-weight: bold;
 }
 
 
 .extra-contenu p {
     margin-left: 2em;
+    margin-right: 1em;
 }
 
 .extra-contenu ul {
-    margin-left: 2em;
+    margin-left: 3em;
     margin-bottom: 1.5em;
 }
+
+
+.extra-contenu li p  {
+    margin-left: 0em;
+}
+
+/* Sous-listes :*/
+.extra-contenu ul li ul {
+    margin-left: 0.5em;
+}
+
 
 .extra-contenu img {
     display: block; /* Transformer les images en éléments de bloc */

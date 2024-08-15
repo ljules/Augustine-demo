@@ -1,0 +1,20 @@
+A FAIRE :
+---------
+
+
+
+FAIT :
+------
+
+- Réparer la balise de la dernière image (météo) pour l'article Go Nogaro.
+- Les images d'origine WhatApp semblent poser un problème pour être afficher dans le modal de visualisation.
+- Réduire la taille des titres H1, H2 etc.
+- Laisser une légère marge en largeur.
+- Réduire la largeur du tableau de la liste des articles
+- Retirer de la barre de menu home, et prévoir une réduction sans texte (icône uniquement).
+- Masquer des colonnes en affichage mobile du tableau des performances.
+- L'icône partager un article déborde sur la droite en navigation mobile, idem 
+- Réduire la largeur des trombinoscopes
+- Sur la page liste des équipes, restreindre l'affichage en largeur maxi de l'image de l'équipe
+- En mode mobile, imposer le fond opaque pour la barre de navigation lorsque le menu est développé.
+- Désactiver/limiter la production du fichier de log.

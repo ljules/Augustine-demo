@@ -40,32 +40,38 @@ l'affichage d'une page avec les équipes en exploitant le dictionnaire DICO_PERF
         </div>
     </div>
     
-    <table class="table table-striped table-hover shadow border border-1s border-black table-bordered text-center ms-2">
+    <!-- Tableau de l'historique des performances : -->
+         
+    <table class="table table-striped table-hover shadow border border-1s border-black table-bordered text-center ms-1"
+           style="width: 95%">
         <thead>
-            <tr class="align-middle">
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-calendar-week"></i></p><p class="m-0 p-0 small text-white">Session</p></th>                
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-globe-europe-africa"></i></p><p class="m-0 p-0 small text-white">Pays</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-geo-alt"></i></p><p class="m-0 p-0 small text-white">Circuit/ville</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-pencil-square"></i></p><p class="m-0 p-0 small text-white">Commentaire</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-ev-front"></i></p><p class="m-0 p-0 small text-white">Véhicule</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-trophy"></i></p><p class="m-0 p-0 small text-white">Classement</p></th>
-                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 h4"><i class="bi bi-battery-half"></i></p><p class="m-0 p-0 small text-white">Consommation</p><p class="m-0 p-0 small text-white">(km/kW.h)</p></th>
+            <tr class="align-middle" style="font-size: 0.8em;">
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-calendar-week"></i></p><p class="m-0 p-0 small text-white">Session</p></th>                
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-globe-europe-africa"></i></p><p class="m-0 p-0 small text-white">Pays</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-geo-alt"></i></p><p class="m-0 p-0 small text-white">Circuit</p></th>
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-pencil-square"></i></p><p class="m-0 p-0 small text-white">Commentaire</p></th>
+                <th class="bg-secondary d-none d-lg-table-cell" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-ev-front"></i></p><p class="m-0 p-0 small text-white">Véhicule</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-trophy"></i></p><p class="m-0 p-0 small text-white">Rang</p></th>
+                <th class="bg-secondary" scope="col"><p class="text-warning m-0 p-0 fs-4"><i class="bi bi-battery-half"></i></p><p class="m-0 p-0 small text-white">Conso.</p><p class="m-0 p-0 small text-white">(km/kW.h)</p></th>
             </tr>
         </thead>
 
         <tbody>
             {% for session in DICO_PERF %}
-                <tr>
+                <tr class="align-middle" style="font-size: 0.9em;">
                     <th scope="row">{{ session }}</th>
                     {% for cle in DICO_PERF[session] %}                        
-                        <td {% if cle == "commentaire"  %} class="small" {% endif %}>{{ DICO_PERF[session][cle] }}</td>
+                        <td  class= "
+                                    {% if cle == 'commentaire'  %} small {% endif %}
+                                    {% if cle in ['pays', 'commentaire', 'véhicule']  %} d-none d-lg-table-cell {% endif %}
+                        ">
+                            {{ DICO_PERF[session][cle] }}
+                        </td>
                     {% endfor %}
                 </tr> 
             {% endfor %}             
         </tbody>
-    </table>
-            
-    
+    </table>      
 
 {% endblock %}
 
