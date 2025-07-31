@@ -217,6 +217,10 @@ def generate_gallery_pages(generator):
 
     pelican_context = generator.context.copy()
 
+    # 🔧 Ajout manuel des variables globales indispensables pour les templates
+    # siteurl = generator.settings.get('SITEURL', '')
+    # theme_static_dir = generator.settings.get('THEME_STATIC_DIR', 'theme')
+
     for galerie, images in DICO_GALERY.items():
         galerie_data = {
             'galerie_name': galerie,
@@ -224,6 +228,14 @@ def generate_gallery_pages(generator):
         }
 
         context = {**pelican_context, **galerie_data}
+
+        # 🔁 Fusion du contexte Pelican avec les données spécifiques et les variables nécessaires
+        # context = {
+        #     **pelican_context,
+        #     **galerie_data,
+        #     'SITEURL': siteurl,
+        #     'THEME_STATIC_DIR': theme_static_dir,
+        # }
 
         try:
             rendered_content = template.render(context)

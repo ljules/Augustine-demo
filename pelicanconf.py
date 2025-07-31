@@ -108,6 +108,7 @@ NAV_SITE_AUGUSTINE = (#("Home", "/", "bi bi-house-fill", None),
 
 THEME = 'THEMES/Augustine-theme'
 #THEME = 'THEMES/notmyidea'
+# THEME_STATIC_DIR = 'theme'
 PATH = 'content'
 ARTICLE_PATHS = ['articles']   # Sous-dossier de PATH qui contient les articles.
 PAGE_PATHS = ['pages']         # Dossier qui contient les pages statiques du site.
