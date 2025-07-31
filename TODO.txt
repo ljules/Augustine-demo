@@ -1,6 +1,10 @@
 A FAIRE :
 ---------
 
+- Sur les pages à propos et véhicules, rajouter la barre retour inférieur (home et haut de page)
+- Rajouter un pop up de notification lorsqu'on appui sur le bouton partager sur un article.
+- Retirer ou réduire les informations GPS dans la fenêtre de visualisation des photos.
+ 
 
 
 FAIT :

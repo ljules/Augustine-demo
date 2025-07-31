@@ -54,6 +54,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Génération automatique des légendes sous les images à partir du texte ALT :
+    document.querySelectorAll('.article-contenu img, .extra-contenu img, .accueil img').forEach(function(img) {
+        const altText = img.getAttribute('alt');
+        
+        // Ne pas ajouter de légende si :
+        // - pas d'alt
+        // - l'image est dans un bloc à exclure (ex : shortcode, emoji, etc.)
+        if (
+            !altText || 
+            altText.trim() === '' || 
+            img.closest('.no-caption, .shortcode, .gemoji, .emoji')
+        ) {
+            return; // on ignore cette image
+        }
+
+        // Ajouter la légende sinon
+        const caption = document.createElement('div');
+        caption.className = 'alt-img';
+        caption.textContent = altText;
+        img.parentNode.appendChild(caption);
+    });
+
+
+
     // Récupérer l'état du carrousel depuis le localStorage au chargement
     const carrouselState = localStorage.getItem('carrouselState');
     if (carrouselState === 'hidden') {
@@ -102,9 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavbar();
     });
 });
-
-
-
 
 
 

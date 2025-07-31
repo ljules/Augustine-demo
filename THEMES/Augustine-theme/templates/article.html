@@ -97,7 +97,7 @@ Cette page du template génère le contenu des articles.
 
 
         <!-- Script pour afficher le contenu la propriété ALT sous les images : -->
-        <script>
+        <!-- <script>
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.article-contenu img').forEach(function(img) {
                     const altText = img.getAttribute('alt');
@@ -107,7 +107,7 @@ Cette page du template génère le contenu des articles.
                     img.parentNode.appendChild(caption);
                 });
             });  
-        </script>
+        </script> -->
 
         <!-- COMMENTAIRES DISQUS DE L'ARTICLE :  -->
         {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}

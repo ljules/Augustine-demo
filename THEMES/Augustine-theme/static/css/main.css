@@ -214,8 +214,8 @@ Logo du header :
 }
 
 /*
-Eléménents de navigation :
---------------------------
+Eléments de navigation :
+------------------------
 */
 
 .navbar {
@@ -303,8 +303,8 @@ Style de l'entête secondaire :
 
 
 /*
-Initilialisation de l'état d'affichagedu carrousel au chargement de la page :
------------------------------------------------------------------------------
+Initilialisation de l'état d'affichage du carrousel au chargement de la page :
+------------------------------------------------------------------------------
 */
 #topCarrousel {
     display: block; /* ou 'none' si vous souhaitez qu'il soit masqué par défaut */
@@ -423,7 +423,51 @@ ____________________________________________________
 ____________________________________________________
 */
 
+
+/*
+-------------------------------------
+Mise en page des éléments Markdowns :
+-------------------------------------
+*/
+
+/*
+Les blockquotes :
+-----------------
+*/
+blockquote {
+    border-left: 6px solid var(--bs-warning);
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    margin: 1em;
+    font-style: normal;
+    background-color: rgb(150, 150, 150);
+    color: #ffffff;
+}
+
+blockquote p {
+    margin: 0 !important;
+}
+
+blockquote img.gemoji {
+    height: 2em;
+    width: 2em;
+}
+
+/* SVG d'emojis */
+img.gemoji {
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: text-bottom;
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+
+
+
 /* 
+---------------------------
 Mise en page de l'accueil :
 ---------------------------
 */
@@ -472,13 +516,21 @@ Mise en page de l'accueil :
 }
 
 
-.accueil p img {
+.accueil p img:not(.gemoji) {
     display: block; /* Transformer les images en éléments de bloc */
     margin: 0.8em auto; /* Centre les images horizontalement avec une marge autour */
     max-width: 90%;
     max-height: 400px;
-    border-radius: 2%;
-    /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); */
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.accueil p .alt-img {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: -5px;
 }
 
 .accueil video {
@@ -488,6 +540,7 @@ Mise en page de l'accueil :
 
 
 /*
+-----------------------------------
 Mise en page de l'article de tête :
 -----------------------------------
 */
@@ -502,6 +555,7 @@ Mise en page de l'article de tête :
 
 
 /*
+--------------------------------------
 Mise en page du contenu des articles :
 --------------------------------------
 */
@@ -545,7 +599,7 @@ Mise en page du contenu des articles :
     margin-bottom: 1.5em;
 }
 
-.article-contenu img {
+.article-contenu img:not(.gemoji) {
     display: block; /* Transformer les images en éléments de bloc */
     margin: 0.8em auto; /* Centre les images horizontalement avec une marge autour */
     max-width: 90%;
@@ -559,7 +613,7 @@ Mise en page du contenu des articles :
     text-align: center;
     font-size: 0.8em;
     font-style: italic;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 .article-contenu video {
@@ -572,6 +626,7 @@ Mise en page du contenu des articles :
 
 
 /*
+-----------------------------------
 Mise en page des contenus & pages :
 -----------------------------------
 */
@@ -637,7 +692,7 @@ Mise en page des contenus & pages :
 }
 
 
-.extra-contenu img {
+.extra-contenu img:not(.gemoji) {
     display: block; /* Transformer les images en éléments de bloc */
     margin: 0.8em auto; /* Centre les images horizontalement avec une marge autour */
     max-width: 90%;
@@ -651,7 +706,7 @@ Mise en page des contenus & pages :
     text-align: center;
     font-size: 0.8em;
     font-style: italic;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 .extra-contenu video {

@@ -2,7 +2,7 @@
 # DESCRIPTION :
 #--------------
 
-# Ce plugin permet de rajouter du contenu du spécifique à l'environnement de Pelican.
+# Ce plugin permet de rajouter du contenu spécifique à l'environnement de Pelican.
 # Le contenu est lu à partir d'un fichier Markdown.
 
 # Script généré avec l'aide de Chat GPT.
@@ -12,7 +12,9 @@
 # ---------
 import os
 from pelican import signals
-from markdown import markdown
+#from markdown import markdown
+import markdown as md
+
 
 
 # GESTION DES LOGS :
@@ -39,8 +41,23 @@ def add_extra_context(generator, metadata):
     if os.path.exists(md_file_path):
         with open(md_file_path, 'r', encoding='utf-8') as md_file:                        
             content = md_file.read()
+
+            # Récupération des extensions depuis la config Pelican
+            markdown_settings = generator.settings.get('MARKDOWN', {})
+            extension_configs = markdown_settings.get('extension_configs', {})
+            output_format = markdown_settings.get('output_format', 'html5')
+
+
             logger.debug(f"Markdown content: {content[:100]}...")  # Log first 100 chars
-            html_content = markdown(content)
+            
+            markdown_instance = md.Markdown(
+                extensions=list(extension_configs.keys()),
+                extension_configs=extension_configs,
+                output_format=output_format
+            )
+            html_content = markdown_instance.convert(content)
+
+            
             logger.debug(f"Generated HTML content: {html_content[:100]}...")  # Log first 100 chars
             generator.context[NOM_CONTENU] = html_content
     else:

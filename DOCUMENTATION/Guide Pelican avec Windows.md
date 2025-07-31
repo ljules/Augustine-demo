@@ -15,54 +15,73 @@ Téléchargement de **VS Code** : [Page téléchargement VS Code](https://code.v
 Extensions conseillées :
 - Aucunes extension particulière
 
-## Installation de **Pelican** :
 
-### Installation avec un environnement virtuel :
-
-Nous allons installer **Pelican** dans un environnement virtuel dans notre exemple.
-
-1. **Création & activation de l'environnement virtuel :**
-
-    1.1. Se placer dans le dossier de travail du projet
-    1.2. Exécuter la commande de création d'un environnement virtuel :
-    - **`python -m venv env`**
-
-    1.3. Activer l'environnement virtuel avec la commande :
-    - **`.\env\Scripts\activate `**
-
-
-2. **Installation de Pelican et de Markdown** :
-
-    2.1. Une fois l'environnement activé, exécuter la commande d'installation des paquets de **Pelican** et **Markdown**, ains que de leurs dépendances :
-    - **`pip install pelican Markdown`**
-
-Nous pouvons vérifier la bonne installation des paquets et de leurs dépendances avec la commande **`pip freeze`** qui nous donne :
-
-```PowerShell
-blinker==1.6.2
-docutils==0.20.1
-feedgenerator==2.1.0
-Jinja2==3.1.2
-Markdown==3.4.3
-markdown-it-py==2.2.0
-MarkupSafe==2.1.2
-mdurl==0.1.2
-Pygments==2.15.1
-python-dateutil==2.8.2
-pytz==2023.3
-rich==13.3.5
-six==1.16.0
-Unidecode==1.3.6
-```
-**REMARQUE :** POUR L'INSTANT PELICAN NE FONCTIONNE PAS AVEC L'ENVIRONNEMENT VIRTUEL VENV CAR L'INSTALLATION DES SCRIPTS NE SE FAIT PAS DANS LE DOSSIER .\env\Scripts OU DEVRAIT SE TROUVER NOTAMENT LE FICHIER **pelican-quickstart.exe**. Avec une installation sur le sytème les scripts sont écrits dans le dossier de l'utilisateur : C:\Users\idUser\AppData\Roaming\Python\Python3XX\Scripts
-
-## Installation dans le système :
+## Installation directe **Pelican** dans le système :
 
 Il faudra impérativement réaliser l'installation avec un compte **adminsitrateur** sous **Windows**. Dans le cas contraire, les fichiers exécutables comme **pelican-quickstart.exe** seront installés dans le dossier local de l'utilisateur exécutant **PIP** (*C:\Users\idUser\AppData\Roaming\Python\Python3XX\Scripts*).
 
-Exécuter dans un terminal avec les droits d'adminstration la commande : **`pip install pelican Markdown`**
+<img src="img/Term_admin_win.png" style="height: 500px;">
 
 
+
+
+Exécuter dans un terminal avec les droits d'adminstration la commande :
+
+``` cmd
+pip install pelican Markdown
+```
+
+**<u>Remarque : </u>** Nous installatons ici **Pelican** et la prise en charge avec le format **Markdown**.
+
+Il est possible de vérifier la version de **Pelican** installé avec la commande : **`pip show pelican`** :
+
+``` cmd
+PS C:\Users\ljules> pip show pelican
+Name: pelican
+Version: 4.9.1
+Summary: Static site generator supporting Markdown and reStructuredText
+Home-page:
+Author:
+Author-email: Justin Mayer <authors@getpelican.com>
+License: AGPLv3
+Location: C:\Program Files\Python311\Lib\site-packages
+Requires: blinker, docutils, feedgenerator, jinja2, ordered-set, pygments, python-dateutil, rich, tzdata, unidecode, watchfiles
+Required-by:
+PS C:\Users\ljules>
+```
+
+De même avec la version de **Markdown** avec la commande : **`pip show Markdown`** :
+
+``` cmd
+PS C:\Users\ljules> pip show Markdown
+Name: Markdown
+Version: 3.4.3
+Summary: Python implementation of John Gruber's Markdown.
+Home-page:
+Author: Manfred Stienstra, Yuri Takhteyev
+Author-email: Waylan limberg <python.markdown@gmail.com>
+License: Copyright 2007, 2008 The Python Markdown Project (v. 1.7 and later)
+Copyright 2004, 2005, 2006 Yuri Takhteyev (v. 0.2-1.6b)
+Copyright 2004 Manfred Stienstra (the original version)
+```
+
+# Installations complémentaires :
+
+## Installation de Python-Markdown
+
+
+Cette bibliothèque **Python** perment de rajouter de nombreuses fonctionnalités à la syntaxe **Markdown** de base :
+
+- *shortcodes* pour afficher des emojis;
+- Colaration syntaxique de code avec *Pygments*;
+- Permet de surligner du texte `==texte==`;
+- etc.
+
+Procéder à l'installation avec la commande :
+
+``` cmd
+pip install pymdown-extensions
+``` 
 
 # Création d'un projet **Pelican**
 
@@ -185,7 +204,7 @@ Le dossier **`output`** comoporte entre autres les dossiers suivants :
 
 ### Visualisation du rendu :
 
-**Pelican** dispose d'un serveur *Web** permettant de visualiser le rendu de notre site dans un navigateur.
+**Pelican** dispose d'un serveur *Web* permettant de visualiser le rendu de notre site dans un navigateur.
 Pour visuliser lancer le serveur de **Pelican** il suffit de taper la commande suivante :
 
 > Commande pour le lancement du serveur :
@@ -194,7 +213,7 @@ Pour visuliser lancer le serveur de **Pelican** il suffit de taper la commande s
 
 Pour visualiser le rendu, il faut lancer un navigateur et saisir l'URL suivante : **`http://localhost:8000`**
 
-**Exemple :**
+**<u>Exemple :</u>**
 
 - Après avoir créé le fichier : **`ma-page-test.md`**
 - Et exécuter la commande : **`pelican content`**
@@ -212,6 +231,7 @@ Vous pouvez constater le résultat dans un navigateur avec l'adresse : **`http:/
 
 
 Pour stopper le serveur il suffit d'appuyer sur les touches : **[CTRL] + [C]**
+
 
 # Arborescence du projet :
 
@@ -414,3 +434,43 @@ Les actions globales de Pelican :
 - Pour le site en général, **Pelican** élabore les pages :
     - **`index.html`** :
 
+
+
+# Installation de **Pelican avec un environnement virtuel :
+
+Nous allons installer **Pelican** dans un environnement virtuel dans notre exemple.
+
+1. **Création & activation de l'environnement virtuel :**
+
+    1.1. Se placer dans le dossier de travail du projet
+    1.2. Exécuter la commande de création d'un environnement virtuel :
+    - **`python -m venv env`**
+
+    1.3. Activer l'environnement virtuel avec la commande :
+    - **`.\env\Scripts\activate `**
+
+
+2. **Installation de Pelican et de Markdown** :
+
+    2.1. Une fois l'environnement activé, exécuter la commande d'installation des paquets de **Pelican** et **Markdown**, ains que de leurs dépendances :
+    - **`pip install pelican Markdown`**
+
+Nous pouvons vérifier la bonne installation des paquets et de leurs dépendances avec la commande **`pip freeze`** qui nous donne :
+
+```PowerShell
+blinker==1.6.2
+docutils==0.20.1
+feedgenerator==2.1.0
+Jinja2==3.1.2
+Markdown==3.4.3
+markdown-it-py==2.2.0
+MarkupSafe==2.1.2
+mdurl==0.1.2
+Pygments==2.15.1
+python-dateutil==2.8.2
+pytz==2023.3
+rich==13.3.5
+six==1.16.0
+Unidecode==1.3.6
+```
+**REMARQUE :** POUR L'INSTANT PELICAN NE FONCTIONNE PAS AVEC L'ENVIRONNEMENT VIRTUEL VENV CAR L'INSTALLATION DES SCRIPTS NE SE FAIT PAS DANS LE DOSSIER .\env\Scripts OU DEVRAIT SE TROUVER NOTAMENT LE FICHIER **pelican-quickstart.exe**. Avec une installation sur le sytème les scripts sont écrits dans le dossier de l'utilisateur : C:\Users\idUser\AppData\Roaming\Python\Python3XX\Scripts

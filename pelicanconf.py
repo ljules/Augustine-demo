@@ -10,6 +10,10 @@
 
 import logging
 import os
+import pymdownx.emoji  # Gestion des shortcodes pour les emojis
+
+
+
 
 # Décommenter le code ci-dessous pour activer le journal de log :
 """
@@ -192,8 +196,24 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 
+# CONFIGURATION DU MOTEUR MARKDOWN :
+# ----------------------------------
 
+# CONFIGURATION DU MOTEUR MARKDOWN :
+# ----------------------------------
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.codehilite': {},
+        'markdown.extensions.meta': {},
+        'pymdownx.emoji': {
+            'emoji_index': pymdownx.emoji.gemoji,
+            'emoji_generator': pymdownx.emoji.to_svg,
+        },
+    },
+    'output_format': 'html5',
+}
 
 
 
