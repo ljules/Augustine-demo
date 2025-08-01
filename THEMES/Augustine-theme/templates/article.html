@@ -96,19 +96,6 @@ Cette page du template génère le contenu des articles.
         </article>
 
 
-        <!-- Script pour afficher le contenu la propriété ALT sous les images : -->
-        <!-- <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('.article-contenu img').forEach(function(img) {
-                    const altText = img.getAttribute('alt');
-                    const caption = document.createElement('div');
-                    caption.className = 'alt-img';
-                    caption.textContent = altText;
-                    img.parentNode.appendChild(caption);
-                });
-            });  
-        </script> -->
-
         <!-- COMMENTAIRES DISQUS DE L'ARTICLE :  -->
         {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
         <div class="comments">
