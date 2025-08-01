@@ -23,6 +23,8 @@ On utilisera ce fichier principalement pour :
 - Utiliser des URL absolues au lieu des URL relatives
 - Renseigner l'adresse du serveur Web
 
+<div style="page-break-after: always;"></div>
+
 ## Exemple de fichier `publishconf.py` pour la publication sur GitHub Pages :
 
 **<u>Contenu du fichier `publishconf.py` :</u>**
@@ -53,6 +55,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 Il faudra donc veiller à bien renseigner la variable **`SITEURL`** par l'URL de votre serveur. Dans l'exemple ce serveur correspond à celui d'un **GitHub Pages** : `https://ljules.github.io/Augustine-demo`.
 
+<div style="page-break-after: always;"></div>
 
 # Marche à suivre 
 
@@ -67,3 +70,23 @@ pelican content -s publishconf.py
 # Etape 2 : Upload des fichiers sur le serveur
 
 Généralement on utilisera **Git** et **GitHub** pour réaliser cette tâche afin de réaliser un **commit** et un **push**.
+
+Voici la démarche à suivre avec l'utilisation de **GitHub** avec l'interface graphique de **Visual Studio Code** :
+
+<div style="page-break-after: always;"></div>
+
+**<u>Consignation des fichiers modifiés, créés ou supprimés (`git add`) </u>:**
+
+![Application de la commande git add](img/01-Git-VS_code-refresh.png)
+
+<div style="page-break-after: always;"></div>
+
+**<u>Commit des fichiers (`git commit`) </u>:**
+
+![Commit des fichiers git commit](img/02-Git-VS_code-commit.png)
+
+<div style="page-break-after: always;"></div>
+
+**<u>Synchronisation de GitHub (`git push`) </u>:**
+
+![Push du commit git push](img/03-Git-VS_code-push.png)
